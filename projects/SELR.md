@@ -2,12 +2,12 @@
 layout: project
 type: project
 image: img/SELR/AGU_pos_2020.png
-title: "Slope Enviornmental Lapse Rate"
+title: "Slope Enviornmental Lapse Rates and Fog on Oʻahu's Highest Mountain"
 date: 2020
 published: True
 labels:
   - R
-summary: "Undergraduate Research"
+summary: "Undergraduate Research, Honolulu Community College"
 ---
 
 <img class="img-fluid" src="../img/SELR/AGU_pos_2020.png">
