@@ -6,9 +6,7 @@ title: "JavaScript, Unleash Its Full Potential"
 date: 2023-01-18
 published: true
 labels:
-  - Questions
-  - Answers
-  - StackOverflow
+  - JavaScript
 ---
 
 <img width="300px" class="rounded float-start pe-4" src="../img/javascript/JavaScript_Logo-2680961473.png">
