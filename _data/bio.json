@@ -67,6 +67,21 @@
       ]
     },
     {
+      "company": "University of Hawaiʻi at Mānoa",
+      "position": "Student Research",
+      "website": "https://agu2022fallmeeting-agu.ipostersessions.com/Default.aspx?s=E6-2A-D7-F0-F6-E6-F4-00-C6-A0-30-24-43-CE-7B-82",
+      "startDate": "2021-02-01",
+      "endDate": "Present",
+      "summary": "Conducting Geographic and environmental research that relies on deep learning image classification components to further understanding of the environmental conditions on Hawaiian mountains. Awarded Associated Students of the University of Hawaiʻi at Mānoa Research Award (Spring 2021). Using Python for data visualization, storage, and analysis including deep learning models that classify images based off of environmental conditions. Co-authored posters for the Hawaiʻi Conservation Conference and the American Geophysical Union.",
+      "highlights": [
+        "Python",
+        "Grant Writing",
+        "Machine learning",
+        "Computer Vision"
+        
+      ]
+    },
+    {
       "company": "CyberInfrastructure TRaining for Undergraduates in Summer (CITRUS) Hawaiʻi Data Science Institute",
       "position": "Internship",
       "website": "https://datascience.hawaii.edu/tag/citrus/",
@@ -102,9 +117,60 @@
         "R",
         "JavaScript",
         "HTML/CSS",
+        "Web Scraping",
+        "PowerBI"
+      ]
+    },
+    {
+      "company": "Honolulu Community College",
+      "position": "Student Research",
+      "website": "https://agu2020fallmeeting-agu.ipostersessions.com/Default.aspx?s=76-A1-DE-D7-1F-32-28-4A-73-E8-86-7C-F9-C4-92-52",
+      "startDate": "2020-04-01",
+      "endDate": "2020-12-17",
+      "summary": "Conducted research under Dr. DeLay related to the environmental conditions on Hawaiian mountains. Used R and Python to visualize, store, and wrangle temperature, relative humidity, and other meteorological data. Co-authored published abstract for the American Geophysical Union.",
+      "highlights": [
+        "R",
+        "Python"
+        
+      ]
+    },
+     {
+      "company": "University of Hawaiʻi at Mānoa",
+      "position": "Student Research",
+      "website": "",
+      "startDate": "2020-09-01",
+      "endDate": "2022-05-07",
+      "summary": "Conducting research on taxation and diet in the Pacific. Awarded Undergraduate Research Opportunities Program Project Funding (Fall 2020). Creating an R framework to automate data acquisition and analysis. Presented UH Mānoa Undergraduate Showcase (Spring 2022)",
+      "highlights": [
+        "R",
         "Web Scraping"
+        
+      ]
+    },
+    {
+      "company": "Kupu",
+      "position": "Team member",
+      "website": "",
+      "startDate": "2019-05-01",
+      "endDate": "2019-08-20",
+      "summary": "Hawaiʻi Youth Conservation CORPS. Project presentation at Kupu Hoʻike.",
+      "highlights": [
+        "Public Speaking"
+      ]
+    },
+    {
+      "company": "Hawaiʻi State Department of Health",
+      "position": "Behavioral Health Student",
+      "website": "",
+      "startDate": "2018-08-01",
+      "endDate": "2019-05-01",
+      "summary": "Completed fellowship at the Behavioral Health Administration, Alcohol and Drug Abuse division. Compiled a complete list of substance use treatment providers in Hawai‘i.",
+      "highlights": [
+        "Microsoft Excel"
       ]
     }
+    
+    
   ],
   "volunteer": [
     {
