@@ -11,7 +11,7 @@ labels:
   - StackOverflow
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/javascript/JavaScript_Logo-2680961473.png)">
+<!-- <img width="300px" class="rounded float-start pe-4" src="../img/javascript/JavaScript_Logo-2680961473.png)"> -->
 
 
 
