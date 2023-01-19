@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/HCC/AGU_pos_2020.png
+image: img/HCC/HCC_Poster_#75 DeLay1024_1.jpg
 title: "Using Meteorological Monitoring and Image recognition to Inform Species Relocation"
 date: 2022
 published: True
