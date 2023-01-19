@@ -1,9 +1,9 @@
 ---
 layout: essay
 type: essay
-title: "Smart Questions, Good Answers"
+title: "JavaScript, Unleash Its Full Potential"
 # All dates must be YYYY-MM-DD format!
-date: 2015-09-08
+date: 2023-01-18
 published: true
 labels:
   - Questions
@@ -11,7 +11,9 @@ labels:
   - StackOverflow
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/javascript/js.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/javascript/JavaScript_Logo-2680961473.png)">
+
+
 
 ## First exposure to JavaScript
 
