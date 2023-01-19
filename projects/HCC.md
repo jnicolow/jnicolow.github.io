@@ -6,7 +6,11 @@ title: "Using Meteorological Monitoring and Image recognition to Inform Species 
 date: 2022
 published: True
 labels:
-  - R
+  - Python
+  - Machine Learning
+  - Computer Vision
+  - Climate Science
+  - Meteorology
 summary: "Undergraduate Research, University of Hawaiʻi at Mānoa"
 ---
 
