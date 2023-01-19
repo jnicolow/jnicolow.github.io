@@ -1,43 +1,41 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
+    "name": "Joel Nicolow",
     "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
+    "picture": "../img/headshot_joel_nicolow_reduced_quality.jpg",
     "email": "molly@hawaii.edu",
     "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "website": "https://jnicolow.github.io",
+    "summary": "I am currently an undergraduate at the University of Hawai‘i at Mānoa where I study Information and Computer Sciences. My specific interests include: date science, machine learning, and deep learning. I enjoy finding interdisciplinary applications for these interests. ",
+    "location": { "address": "", "postalCode": "96734", "city": "Kailua", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "jnicolow", "url": "http://github.com/jnicolow" },
+      { "network": "linkedin", "username": "joelnicolow", "url": "http://linkedin.com/in/changeme" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Data Science" },
+    { "name": "Machine Learning" },
+    { "name": "Remote Sensing" },
+    { "name": "Computer Vision" },
+    { "name": "Data Science Applications in the Climate Sciences" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "Python", "R", "Javascript"]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "keywords": [ "Windows OS" ]
     }
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "institution": "University of Hawai‘i at Mānoa",
+      "area": "Computer Science (expected Fall, 2025)",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
+      "startDate": "2019-09-01",
       "endDate": "Present",
       "courses": [
       ]
@@ -45,69 +43,96 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
+      "company": "Hawaiʻi Established Program to Stimulate Competitive research Change(HI)",
+      "position": "Undergraduate researcher",
+      "website": "https://hawaii.edu/epscor/change-hi/",
+      "startDate": "2023-01-09",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Machine Learning",
+        "Computer vision"
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "Climate Resilience Collaborative",
+      "position": "Introductory Remote Sensing Specialist",
+      "website": "https://www.soest.hawaii.edu/crc/",
+      "startDate": "2022-03-23",
+      "endDate": "Present",
       "summary": "",
       "highlights": [
         "Troubleshoot software, hardware and networking issues over the phone",
         "Answer phone and email responses to the ITS Help Desk"
       ]
+    },
+    {
+      "company": "CyberInfrastructure TRaining for Undergraduates in Summer (CITRUS) Hawaiʻi Data Science Institute",
+      "position": "Internship",
+      "website": "https://datascience.hawaii.edu/tag/citrus/",
+      "startDate": "2022-06-01",
+      "endDate": "2022-07-01",
+      "summary": "One-month program developing key skills and abilities in CyberInfrastructure (CI) with a climate-focused research project applying CI skills. Skills developed in data science, analytics, and visualization.",
+      "highlights": [
+        "Data Visualization",
+        "Public Speaking",
+        "Machine Learning",
+        "Python"
+      ]
+    },
+    {
+      "company": "University of Hawaiʻi - Thompson School of Social Work & Public Health",
+      "position": "Data Analyst",
+      "website": "https://www.soest.hawaii.edu/crc/",
+      "startDate": "2022-04-10",
+      "endDate": "2022-08-10",
+      "summary": "Using the R programming language to aggregate observational data.",
+      "highlights": [
+        "R"
+      ]
+    },
+    {
+      "company": "Pacific Health Analytics Collaborative",
+      "position": "Research Assistant",
+      "website": "https://www.hawaii.edu/aging/phac/",
+      "startDate": "2019-09-19",
+      "endDate": "2022-03-15",
+      "summary": "Undergraduate research assistant, member of the analytics team.",
+      "highlights": [
+        "R",
+        "JavaScript",
+        "HTML/CSS",
+        "Web Scraping"
+      ]
     }
   ],
   "volunteer": [
-    {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
+/*    {
+      "organization": "Hoʻokuaʻāina",
+      "website": "https://hookuaaina.org/",
+      "position": "",
+      "startDate": "2012-06-01",
       "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
       "summary": "",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "",
+        ""
       ]
     }
+    */
   ],
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "title": "Project funding",
+      "date": "Fall 2020",
+      "awarder": "Undergraduate Research Oppertunities Program, University of Hawaiʻi at Mānoa",
+      "summary": ""
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Research Award",
+      "date": "Spring 2021",
+      "awarder": "Associated Students of the University of Hawaiʻi",
+      "summary": ""
     }
   ],
   "references": [
