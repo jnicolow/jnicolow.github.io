@@ -1,10 +1,10 @@
 ---
 layout: essay
 type: essay
-title: "Smart Questions, Good Answers"
+title: "stupid questions, or lazy questions?"
 # All dates must be YYYY-MM-DD format!
 date: 2023-01-26
-published: false
+published: true
 labels:
   - Questions
   - Answers
