@@ -87,6 +87,3 @@ Then you connect other layers after it.
 Here we can see that both the question shows a deep understanding of the topic and they received an indepth answer. Compared to the first question which was closed as a response.
 
 These examples show why it is important to ask smart questions on these forums. Not only do you avoid wasting other’s time but you also have a better chance of getting the answers you are looking for.
-
-## Conclusion
-
