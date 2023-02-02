@@ -9,7 +9,7 @@ labels:
   - Python
   - Machine learning
   - Computer vision
-summary: "Fog detection on Mount Kaʻala, Oʻahu using image recognition in trail camera"
+summary: "Undergraduate Research, University of Hawaiʻi at Mānoa"
 ---
 
 <img class="img-fluid" src="../img/fogCNN/AGU_pos_2022.png">
