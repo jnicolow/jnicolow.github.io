@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/fogCNN/AGU_pos_2022.png
 title: "Chasing Fog"
-date: 2021
+date: 2022
 published: True
 labels:
   - Python
