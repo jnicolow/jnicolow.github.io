@@ -48,7 +48,7 @@
       "website": "https://hawaii.edu/epscor/change-hi/",
       "startDate": "2023-01-09",
       "endDate": "Present",
-      "summary": "",
+      "summary": "Undergraduate researcher using machine learning and data science tools to extract environmental information from images.",
       "highlights": [
         "Machine Learning",
         "Computer vision"
@@ -60,7 +60,7 @@
       "website": "https://www.soest.hawaii.edu/crc/",
       "startDate": "2022-03-23",
       "endDate": "Present",
-      "summary": "",
+      "summary": "Introductory Remote Sensing Specialist at the Climate Resilience Collabrative in SOEST. Working with APIs and geospatial data in Python 3 including contour extraction and the use of machine learning toolkits for pixel classification.",
       "highlights": [
         "Troubleshoot software, hardware and networking issues over the phone",
         "Answer phone and email responses to the ITS Help Desk"
@@ -98,7 +98,7 @@
     {
       "company": "University of Hawaiʻi - Thompson School of Social Work & Public Health",
       "position": "Data Analyst",
-      "website": "https://www.soest.hawaii.edu/crc/",
+      "website": "",
       "startDate": "2022-04-10",
       "endDate": "2022-08-10",
       "summary": "Using the R programming language to aggregate observational data.",
@@ -176,30 +176,28 @@
     {
       "organization": "Hoʻokuaʻāina",
       "website": "https://hookuaaina.org/",
-      "position": "",
-      "startDate": "2012-06-01",
+      "position": "Loʻi (kalo farm) in Kailua",
+      "startDate": "2022-06-01",
       "endDate": "Present",
-      "summary": "",
-      "highlights": [
-        "",
-        ""
-      ]
+      "summary": "I got to Hoʻokuaʻāina when I have avaible days because Hawaiʻi's food sustainibility and mālama ʻāina are very important to me.",
+      "highlights": []
     }
     
   ],
   "awards": [
+     {
+      "title": "Research Award",
+      "date": "Spring 2021",
+      "awarder": "Associated Students of the University of Hawaiʻi",
+      "summary": "Research award atained to finance trail cameras for meteorologic research on Mount Kaʻala"
+    },
     {
       "title": "Project funding",
       "date": "Fall 2020",
       "awarder": "Undergraduate Research Oppertunities Program, University of Hawaiʻi at Mānoa",
-      "summary": ""
-    },
-    {
-      "title": "Research Award",
-      "date": "Spring 2021",
-      "awarder": "Associated Students of the University of Hawaiʻi",
-      "summary": ""
+      "summary": "Project funding for research on import taxation in the Pacific"
     }
+   
   ],
   "references": [
     {
