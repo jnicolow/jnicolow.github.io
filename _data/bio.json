@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Joel Nicolow",
-    "label": "Data science student researcher",
+    "label": "Student",
     "picture": "/img/head_shot_joel_nicolow_CRC-square-270x270.jpg",
     "email": "jnicolow@hawaii.edu",
     "phone": "(808) 594-7808",
@@ -48,10 +48,9 @@
       "website": "https://hawaii.edu/epscor/change-hi/",
       "startDate": "2023-01-09",
       "endDate": "Present",
-      "summary": "Image classification of enviornmental conditions",
+      "summary": "",
       "highlights": [
-        "Python",
-        "Machine learning",
+        "Machine Learning",
         "Computer vision"
       ]
     },
@@ -61,12 +60,10 @@
       "website": "https://www.soest.hawaii.edu/crc/",
       "startDate": "2022-03-23",
       "endDate": "Present",
-      "summary": "Introductory Remote Sensing Specialist at the Climate Resilience Collabrative in SOEST. Working with APIs and geospatial data in Python 3 including image segmentation and the use of machine learning toolkits for pixel classification.",
+      "summary": "",
       "highlights": [
-        "Python",
-        "Machine learning",
-        "Remote sensing",
-        "Computer vision"
+        "Troubleshoot software, hardware and networking issues over the phone",
+        "Answer phone and email responses to the ITS Help Desk"
       ]
     },
     {
@@ -115,7 +112,7 @@
       "website": "https://www.hawaii.edu/aging/phac/",
       "startDate": "2019-09-19",
       "endDate": "2022-03-15",
-      "summary": "Undergraduate research assistant, member of the analytics team. My tasks included helping to automate data dashboard webs craping using the R programing language, helping develop a data dashboard using the programming languages R, JavaScript, HTML, and CSS, and finally creating Power BI data dashboards and visualizations",
+      "summary": "Undergraduate research assistant, member of the analytics team.",
       "highlights": [
         "R",
         "JavaScript",
@@ -175,7 +172,7 @@
     
     
   ],
-/*  "volunteer": [
+  "volunteer": [
     {
       "organization": "Hoʻokuaʻāina",
       "website": "https://hookuaaina.org/",
@@ -189,19 +186,19 @@
       ]
     }
     
-  ],*/
+  ],
   "awards": [
     {
       "title": "Project funding",
       "date": "Fall 2020",
       "awarder": "Undergraduate Research Oppertunities Program, University of Hawaiʻi at Mānoa",
-      "summary": "Recieved project funding for reasearch on SSB taxation in the Pacific (see Undergraduate researcher, Hawaiʻi Established Program to Stimulate Competitive research Change(HI) 2020-2022)"
+      "summary": ""
     },
     {
       "title": "Research Award",
       "date": "Spring 2021",
       "awarder": "Associated Students of the University of Hawaiʻi",
-      "summary": "Recieved Research Award to fund trail cameras for computer vision project (see Student Research, University of Hawaiʻi at Mānoa and Undergraduate researcher 2021 - Present, Hawaiʻi Established Program to Stimulate Competitive research Change(HI))"
+      "summary": ""
     }
   ],
   "references": [
