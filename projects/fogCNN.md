@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/fogCNN/AGU_pos_2022.png
+image: img/fogCNN/kaala.JPG
 title: "Chasing Fog"
 date: 2022
 published: True
@@ -14,7 +14,7 @@ labels:
 summary: "Measuring Fog Frequency With Elevation on Mt. Kaala Using Trail Cameras: Initial Findings"
 ---
 
-<img class="img-fluid" src="../img/fogCNN/kaala.JPG">
+<img class="img-fluid" src="../img/fogCNN/AGU_pos_2022.png">
 
 There is a saying in Hawaiʻi (and elsewhere) “the mountains make the cloud”. This is in reference to oragraphic lift where as air is pushed up a mountains slopes the temperature decreases hightening the relative humidity until clouds are formed. This proces is a very important source of water in Hawaiʻi. 
 
