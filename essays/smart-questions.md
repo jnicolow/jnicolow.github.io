@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "stupid questions, or lazy questions?"
+title: "Stupid Questions, or Lazy Questions?"
 # All dates must be YYYY-MM-DD format!
 date: 2023-01-26
 published: true
