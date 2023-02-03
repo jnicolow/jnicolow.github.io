@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/HCC/snail.png
+image: img/HCC/snail_square.png
 title: "Informed Species Relocation"
 date: 2022
 published: True
