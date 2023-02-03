@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/SELR/kaala_summit.JPG
+image: img/SELR/AGU_pos_2020.png
 title: "Meteorological Data Analysis Automation in R"
 date: 2020
 published: True
