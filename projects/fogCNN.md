@@ -9,6 +9,8 @@ labels:
   - Python
   - Machine learning
   - Computer vision
+  - Climate Science
+  - Meteorology
 summary: "Measuring Fog Frequency With Elevation on Mt. Kaala Using Trail Cameras: Initial Findings"
 ---
 
