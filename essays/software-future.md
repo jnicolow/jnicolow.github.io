@@ -6,7 +6,8 @@ title: "How I Found Machine Learning"
 date: 2023-02-02
 published: true
 labels:
-  - JavaScript
+  - Data Science
+  - Machine Leanring
 ---
 
 <img width="300px" class="rounded float-start pe-4" src="../img/ml/computer-brain-interface-darpa-s.jpg">
