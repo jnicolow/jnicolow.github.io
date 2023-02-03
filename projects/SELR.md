@@ -7,6 +7,7 @@ date: 2020
 published: True
 labels:
   - R
+  - Meteorology
 summary: "Slope Enviornmental Lapse Rates and Fog on Oʻahu’s Highest Mountain"
 ---
 
