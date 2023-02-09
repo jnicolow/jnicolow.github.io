@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Coding standards, are they important?"
+title: "Coding Standards, Are They Important?"
 # All dates must be YYYY-MM-DD format!
 date: 2023-02-09
 published: true
@@ -14,9 +14,6 @@ labels:
 
 <img width="300px" class="rounded float-start pe-4" src="../img/coding-standards/th-2801846274.jpg">
 
-
-
-## First exposure to JavaScript
 
 ## What are coding standards
 Coding standards are a set of guidelines to ensure that code is written in a consistent manner. For example, is there a space after commas when creating a numpy array in Python. The argument is not whether you should, objectively, have a space after the comma but rather that you should choose a way to do it and stick with it. The consistency is of more importance than the guidelines themselves. 
