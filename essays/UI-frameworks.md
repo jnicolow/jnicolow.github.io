@@ -3,29 +3,31 @@ layout: essay
 type: essay
 title: "UI frameworks, Are They Worth It?"
 # All dates must be YYYY-MM-DD format!
-date: 2023-01-18
+date: 2023-02-23
 published: true
 labels:
-  - JavaScript
+  - UI
+  - UI frameworks
+  - HTML
+  - CSS
+  - Web Developement
 ---
+
+
+
+
+## Investment
+Learning a new UI framework is an investment. Like learning how to use any tool there is a learning curve it will take time to be comfortable with a UI framework and even more time to master it. Just like with learning any new tool there is a “risk reward” relationship but rather than risk and reword it is time (and maybe money) vs. the.One example non-learning related is a washing machine. Washing machines are very expensive and purchasing one is not feasible for everyone. However, longterm using a laundry mat will actually be more costly.
+
+This is the same way learning new skills has to be viewed. Maybe it seems like a large investment upfront but, what is the end payoff going to be? Does it make it worth it? The answer varies. 
+
+## how to decide
+The image shows a graph with a hypothetical time cost for an activity given two approaches (y-axis hours spent, x-axis day). The first (the green shaded area) we can see takes constant time (2 hours per day) while the second (purple area) requires a large time investment at the beginning (like learning a new tool), however, reduces down to no time per day before day ten. Now we can take the integrals of the functions to get the cumulative time spent in each of the approaches. This is shown by the red an black lines. Black representing the first constant time approach and red representing the second approach. We can see that by day 21 our first constant time approach will actually have coast us more time over all.
+
+So if the task is only something you would need to do for 10 days it would make sense to take the constant time approach, and if it is something that would take more than 21 days the second approach where a new skill is learned to eventually (by day ten) automate the work would be more time efficient in the long run.
+
+This threshold is somewhere different for each individual circumstance. This is only an example to convey the idea rather than the relationship using a UI framework versus using plain HTML and CSS has.
 
 <img width="300px" class="rounded float-start pe-4" src="../img/UI-frameworks/UI-frameworks-graph.png">
 
 
-
-## First exposure to JavaScript
-
-My first exposure to JavaScript was while working at the Pacific Health Analytics Collabrative. We had no  webdevelopers and were tasked with implementing the Hawaiʻi Behavioral Health Dashboard (HBHD). My task was to write the back end JavaScript for the dashboard. During this experience I did not under go formal training with the language and at the time only had worked in the programing language/statistical package R. 
-
-## What’s new?
-
-Now after completing the Basic JavaScript and ES6 modules on freeCodeCamp I have gained a new understanding of JavaScript. Not only was the course a good refresher of syntax but I also learned new things such as arrow functions which allow for a more compact alternative to the traditional function. However, they do include there own deliberate limitations and it is important to know those such as, they should not be used as methods because they do not have bindings to this, arguments, or super like traditional functions. 
-
-## Knowledge is power
-One thing I have noticed programming is that knowing the quickest way to solve a problem with the language you are working with is important both in terms of time efficiency and and in readability of your resulting code. For example when I was first working with the Python Pandas library I did not know of the groupby function available for data frames and wrote many long functions to facilitate this function, which were both hard to understand and less flexible than the Pandas groupby function. Having a strong knowledge of the features that the language you are working with has is necessary in order to be an efficient programmer.
-
-## JavaScript capabilities
-During my work on the HBHD there was a time where I was working with a window in the page that would display a different PowerBI dashboard depending on user selection. I was fairly new to programming at the time and remember wishing I could return a function from another function to solve the problem I was working on. This is indeed a capability of JavaScript and one of the features that makes it unique. Also during the development of this dashboard I had to learn how to work with apsyncronis functions which is a feature that makes JavaScript perfect for web applications.
-
-## Unleash JavaScript
-JavaScript’s versatility and uniqueness is part of what has made it one fo the core technologies of the internet. However, harnessing the full potential of JavaScript requires a knowledge of it’s capabilities and features. The language is only as strong as the programmer.
