@@ -30,7 +30,7 @@ So if the task is only something you would need to do for 10 days it would make 
 
 This threshold is somewhere different for each individual circumstance. This is only an example to convey the idea rather than the relationship using a UI framework versus using plain HTML and CSS has.
 
-The example relationship above assumes that the more time intensive (learning a new tool) requires less time once mastered than the constant time (using already possessed knowledge). In fact, in that example by day 10 the task has been automated and requires no time. This is of course a rudimentary example and does not directly map to every situation.
+The example relationship in the graph assumes that the more time intensive (learning a new tool) requires less time once mastered than the constant time (using already possessed knowledge). In fact, in that example by day 10 the task has been automated and requires no time. This is of course a rudimentary example and does not directly map to every situation.
 
 
 
