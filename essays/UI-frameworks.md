@@ -33,3 +33,10 @@ This threshold is somewhere different for each individual circumstance. This is 
 The example relationship above assumes that the more time intensive (learning a new tool) requires less time once mastered than the constant time (using already possessed knowledge). In fact, in that example by day 10 the task has been automated and requires no time. This is of course a rudimentary example and does not directly map to every situation.
 
 
+
+
+
+
+<img width="300px" class="rounded float-start pe-4" src="../img/UI-frameworks/th-4110867492.jpg">
+
+
