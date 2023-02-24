@@ -21,7 +21,7 @@ Learning a new UI framework is an investment. Like learning how to use any tool 
 
 This is the same way learning new skills has to be viewed. Maybe it seems like a large investment upfront but, what is the end payoff going to be? Does it make it worth it? The answer varies. 
 
-## how to decide
+## How to Decide
 <img width="300px" class="rounded float-start pe-4" src="../img/UI-frameworks/UI-frameworks-graph.png">
 
 The image shows a graph with a hypothetical time cost for an activity given two approaches (y-axis hours spent, x-axis day). The first (the green shaded area) we can see takes constant time (2 hours per day) while the second (purple area) requires a large time investment at the beginning (like learning a new tool), however, reduces down to no time per day before day ten. Now we can take the integrals of the functions to get the cumulative time spent in each of the approaches. This is shown by the red an black lines. Black represents the first constant time approach and red represents the second approach. We can see that by day 21 our first constant time approach will actually have cost us more time over all.
@@ -32,7 +32,7 @@ This threshold is somewhere different for each individual circumstance. This is 
 
 The example relationship in the graph assumes that the more time intensive (learning a new tool) requires less time once mastered than the constant time (using already possessed knowledge). In fact, in that example by day 10 the task has been automated and requires no time. This is of course a rudimentary example and does not directly map to every situation.
 
-## What is the payoff of using UI frameworks 
+## What is the Payoff of Using UI Frameworks 
 <img width="300px" class="rounded float-start pe-4" src="../img/UI-frameworks/th-4110867492.jpg">
 
 My first experience with web development was a few months after I learned my first programming language R. During this time I was working on a dashboard to display mental health and substance use statistics. We were working under the constraint that we had to only use pure CSS and HTML (and JavaScript). I remember often becoming very frustrated trying to make the simplest change (such as centering elements). As I searched online for solutions I often saw answers referencing Bootstrap (a UI framework). At the time I didnʻt understand it and it seemed like just an additional hurdle to jump through especially because the webpage was already mostly built out using pure HTML and CSS (of course it would have still been easy to add components from UI frameworks in). 
