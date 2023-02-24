@@ -32,11 +32,15 @@ This threshold is somewhere different for each individual circumstance. This is 
 
 The example relationship in the graph assumes that the more time intensive (learning a new tool) requires less time once mastered than the constant time (using already possessed knowledge). In fact, in that example by day 10 the task has been automated and requires no time. This is of course a rudimentary example and does not directly map to every situation.
 
-
-
-
-
-
+## What is the payoff of using UI frameworks 
 <img width="300px" class="rounded float-start pe-4" src="../img/UI-frameworks/th-4110867492.jpg">
+
+My first experience with web development was a few months after I learned my first programming language R. During this time I was working on a dashboard to display mental health and substance use statistics. We were working under the constraint that we had to only use pure CSS and HTML (and JavaScript). I remember often becoming very frustrated trying to make the simplest change (such as centering elements). As I searched online for solutions I often saw answers referencing Bootstrap (a UI framework). At the time I didnʻt understand it and it seemed like just an additional hurdle to jump through especially because the webpage was already mostly built out using pure HTML and CSS (of course it would have still been easy to add components from UI frameworks in). 
+
+Now that I have experienced that very UI framework, Bootstrap I see why there were many solutions using it. It makes UI tasks such as having a footer stuck to the bottom of the page trivial. Also, there are plenty of UI tasks that are exhibited in almost every webpage and this way you are not reinventing the wheel each time or copy/pasting CSS classes from one project to another.
+
+There is, however, still a relationship similar to the one shown by the graph (I would argue less extreme). Although UI frameworks can be very helpful there is a learning curve. For example while using CSS classes from these framework provided classes it’s very easy to override CSS that you deem more important and it takes some getting used to and possibly a better understanding of the CSS hierarchy then simply using pure CSS would. Overall though after the learning curve knowing and using a UI framework becomes much more efficient then sticking to pure HTML and CSS. 
+
+Although I am still in the “learning curve” for using UI frameworks I believe it has already had a payoff and I already develop webpages with less effort (and headaches). 
 
 
