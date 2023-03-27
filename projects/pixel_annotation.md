@@ -7,10 +7,11 @@ date: 2022
 published: True
 labels:
   - Python
-  - Machine learning
-  - Computer vision
   - Data annotation
   - Pixel classification
+  - Machine learning
+  - Computer vision
+
 summary: "Python toolkit for pixel annotations"
 ---
 
