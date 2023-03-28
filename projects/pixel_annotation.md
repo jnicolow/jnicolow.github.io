@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/pixel_annotation/example_square.jpg
 title: "Let's Get Pixular"
-date: 2023
+date: 2023-03-26
 published: True
 labels:
   - Python
