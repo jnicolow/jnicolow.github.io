@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "Plants of Hawaiʻi"
+title: "Aloha Plants"
 date: 2023-03-28
 labels:
   - Software Engineering
