@@ -54,4 +54,15 @@ Admin account is granted permissions to edit, create plants, projects, as well a
 * Project browser
 * Where to buy native an canoe plants
 
+# Use case ideas
++ User lands on landing page (accessible without account) example plants, projects, and forums are displayed and navbar links to plant browser, project browser, and forum page
++ New user, logs in, able to check relevant projects/recent forums. There will be a button “create forum” which allows users with accounts to create a forum (image, title, description, interests)
++ Admin user, logs in, able to search for projects, forums, people, and plants. Able to edit each card type (I.E projects, forums, people, and plants). There is a create button which opens a form allowing user to create a plant, project, or forum
++ Creator user, logs in, able to search for projects, forums, and plants. Able to edit each card type (I.E projects, forums, and plants). There is a create button which opens a form allowing user to create a plant, project, or forum
+
+# Beyond the basics (bowfilios)
+* Implementing forumns
+* Email notifications for new (relevant) projects
+* Email notifications for deleted forums
+* Customizable profile page (including posts)
 
