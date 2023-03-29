@@ -64,7 +64,7 @@ Admin account is granted permissions to edit, create plants, projects, as well a
 + Creator user, logs in, able to search for projects, forums, and plants. Able to edit each card type (I.E projects, forums, and plants). There is a create button which opens a form allowing user to create a plant, project, or forum
 
 # Beyond the basics (bowfilios)
-* Implementing forumns
+* Implementing forums
 * Email notifications for new (relevant) projects
 * Email notifications for deleted forums
 * Customizable profile page (including posts)
