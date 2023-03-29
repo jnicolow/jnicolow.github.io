@@ -34,12 +34,16 @@ https://files.hawaii.gov/dbedt/op/spb/INCREASED_FOOD_SECURITY_AND_FOOD_SELF_SUFF
 # Mockup page ideas
 ## Non-user 
 Users that have not created a profile first visit the landing page where they can browse plants, projects, and forums. However, they will not be able to create or reply to forums.
+<br />
 ## User
 Users that have created a profile are able to browse plants, projects, and forums. Also given the ability to create, or reply to forums.
+<br />
 ## Creator
 The creator account has the same privileges as the user class but with the added permission to edit and create plants and projects.
+<br />
 ## Administrator
 Admin account is granted permissions to edit, create plants, projects, as well as forums just like the previous user types. They are also able to delete user accounts.
+<br />
 * Landing page
 * User home page
 * User page
