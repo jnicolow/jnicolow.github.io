@@ -12,7 +12,7 @@ labels:
   - Food Sustainability
 ---
 
-Proposal written collaboratively by Joel Nicolow & Brian Dang
+Web application proposal written collaboratively by Joel Nicolow & Brian Dang
 # Overview
 ## Problem
 Due to Hawaii's geographical isolation, the state has high biodiversity with over 10,000 species found nowhere else on earth [2]. However, Hawaii has experienced significant destruction of its dryland forest, with up to 95% destroyed, and only 40% of mesic forest remaining [3].
