@@ -27,8 +27,11 @@ The “Aloha Plants” website allows you to search and view different native pl
 ## Sources:
 [1] Increased Food Security and Food Self-Sufficiency Strategy. Office of Planning Department of Business Economic Development & Tourism.
 https://files.hawaii.gov/dbedt/op/spb/INCREASED_FOOD_SECURITY_AND_FOOD_SELF_SUFFICIENCY_STRATEGY.pdf
-[2] https://dlnr.hawaii.gov/forestry/files/2013/09/SWARS-Issue-6.pdf
+<br />
+[2] Hawaii Statewide Assessment of Forest Conditions and Resource Strategy 2010. Issue 6: Conservation of Native Biodiversity. Department of Land and Natural Reasources. https://dlnr.hawaii.gov/forestry/files/2013/09/SWARS-Issue-6.pdf
+<br />
 [3] State of Hawaiʻi, Department of Land and Natural Resources (DLNR) (2016) Hawaiʻi Forest Action Plan 2016, 306 p. Division of Forestry and Wildlife.
+<br />
 [4] Victory Garden at the National Museum of American History. https://gardens.si.edu/gardens/victory-garden/
 
 # Mockup page ideas
