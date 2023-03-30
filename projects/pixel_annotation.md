@@ -15,7 +15,7 @@ labels:
 summary: "Python toolkit for pixel annotations"
 ---
 
-This is an open source pixel annotation tool written in Python. This tool allows you to select pixels using flood fill, a lasso tool, and/or selecting single pixels. The code is available [here](https://github.com/jnicolow/Python-pixel-classification-tool) (along with more information).
+This is an open source pixel annotation tool written in Python. This tool allows you to select pixels using flood fill, a lasso tool, and/or selecting single pixels. The code is available [here]([https://github.com/jnicolow/Python-pixel-classification-tool](https://github.com/jnicolow/Python-pixel-annotation-tool)) (along with more information).
 
 <img class="img-fluid" src="../img/pixel_annotation/example.jpg">
 
