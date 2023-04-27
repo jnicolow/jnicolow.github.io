@@ -24,5 +24,6 @@ While this is a design pattern I explicitly knew was being used there are many c
 Just as there are yin and yang with design patterns come anti-patterns. These are the opposite of design patterns and can result from a variety of causes including lack of design principle understanding, misapplications of design patterns and other factors such as over and under engineering. These anti-patterns can lead to poor code quality, maintenance problems, and other issues. It is important to understand design principles and patterns in order to avoid creating anti-patterns which can lead to a myriad of issues.
 
 ## Can I Delete This?
+<img width="200px" class="rounded float-start pe-4" src="../img/design-patterns/when-you-delete-code-you-didnt-think-you-needed.jpg">
 One example of this is the lava flow where old code that has not been used or understood in a while hardens into stone because the programmer(s) does not know what the code does exactly and does not want to get rid of it in case it's needed. Or the flip side of this problem is the programmer does not understand all of the project and deletes essential portions out of naivete.
 
