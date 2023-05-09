@@ -21,11 +21,11 @@ If people have the knowledge, they can plant native and canoe plants at their wo
 
 In order to address this our team (tech for a greener Hawaii) created [Aloha Plants](https://aloha-plants.online/) which is a web page which includes information about plant species as well as volunteer opportunities to get involved in conservation in Hawaiʻi.
 
-<img class="img-fluid" src="https://tech-for-a-greener-hawaii.github.io/plantBrowser.png">
+<img class="img-fluid" src="https://tech-for-a-greener-hawaii.github.io/landing.png">
 
 This webpage is a proof of concept that was developed as a group project for an undergraduate software engineering course at the University of Hawaiʻi at Mānoa. Through this project I learned how to use javascript to build a web application but I also learned how to work with MongoDB (databases). My main focus during this project was to develop the functionality (and then fill out) the plant data for the web page. See screenshot below:
 
-<img class="img-fluid" src="https://tech-for-a-greener-hawaii.github.io/projectBrowser.png">
+<img class="img-fluid" src="https://tech-for-a-greener-hawaii.github.io/plantBrowser.png">
 
 We have prepared a document explaining the webpage in addition there is a link to the source code. This document can be found here: [https://tech-for-a-greener-hawaii.github.io/](https://tech-for-a-greener-hawaii.github.io/)
 
