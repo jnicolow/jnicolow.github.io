@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/aloha-plants/Flowers-2.png
 title: "Aloha Plants"
-date: 2023
+date: 2023-05-09
 published: True
 labels:
   - Webdevelopement
