@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/SELR/kaala_summit.JPG
+image: https://aloha-plants.online/images/Flowers-2.png
 title: "Aloha Plants"
 date: 2023
 published: True
