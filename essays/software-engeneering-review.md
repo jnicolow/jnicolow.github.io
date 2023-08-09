@@ -4,7 +4,7 @@ type: essay
 title: "Beyond Web Development: Valuable Lessons in Software Engineering"
 # All dates must be YYYY-MM-DD format!
 date: 2023-05-05
-published: true
+published: false
 labels:
   - Software Engineering
   - Ethics
