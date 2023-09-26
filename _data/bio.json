@@ -26,8 +26,12 @@
       "keywords": [ "Python", "R", "Javascript"]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "Windows OS" ]
+      "name": "Toolsets",
+      "keywords": [ "QGIS" ]
+    },
+    {
+      "name": "OS",
+      "keywords": [ "Windows OS", "Linux" ]
     }
   ],
   "education": [
