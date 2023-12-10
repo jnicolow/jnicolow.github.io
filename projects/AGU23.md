@@ -14,10 +14,18 @@ labels:
 
 summary: "A Machine Learning Toolkit for Fog Precense Classification"
 ---
-*Under construction*
-This webpage provides more information on my AGU poster
+This webpage provides more information on my AGU poster 
+
+FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images
+
+
 [Joel Nicolow](https://jnicolow.github.io/)
+
+
 [jnicolow@hawaii.edu](jnicolow@hawaii.edu)
+
+
+[View pdf]( img/fog/AGU2023poster_nicolow_joel.pdf)
 
 
 
