@@ -20,7 +20,7 @@ FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera 
 [jnicolow@hawaii.edu](jnicolow@hawaii.edu)  
 [View pdf](https://github.com/jnicolow/jnicolow.github.io/blob/main/img/fog/AGU2023poster_nicolow_joel.pdf)
 
-[!Failed to load use view pdf link above](img/fog/AGU2023poster_nicolow_joel.jpg)
+<img class="img-fluid" src="../img/fog/AGU2023poster_nicolow_joel.jpg">
 
 
 
