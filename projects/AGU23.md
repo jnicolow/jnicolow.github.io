@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/fog/agu23_poster_square.jpg
+image: img/fog/agu23_poster_square.png
 title: "FogVision"
 date: 2023-12-11
 published: True
