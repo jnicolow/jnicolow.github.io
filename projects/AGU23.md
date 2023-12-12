@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/fog/KahikinuiStationJoelMosHouseSquare.jpg
+image: img/fog/agu23_poster_square.jpg
 title: "FogVision"
 date: 2023-12-11
 published: True
@@ -20,7 +20,9 @@ FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera 
 [jnicolow@hawaii.edu](jnicolow@hawaii.edu)  
 [View pdf](https://github.com/jnicolow/jnicolow.github.io/blob/main/img/fog/AGU2023poster_nicolow_joel.pdf)
 
+<img class="img-fluid" src="../img/fog/agu23_poster.jpg">
 <img class="img-fluid" src="../img/fog/AGU2023poster.jpg">
+
 
 
 
