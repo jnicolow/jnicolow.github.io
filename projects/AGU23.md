@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/fog/agu23_poster_square.png
-title: "American Geophysical Union 2023 Fall Meeting"
+title: "AGU23"
 date: 2023-12-11
 published: True
 labels:
