@@ -1,0 +1,216 @@
+{
+  "basics": {
+    "name": "Joel Nicolow",
+    "label": "Student",
+    "picture": "/img/head_shot_joel_nicolow_CRC-square-270x270.jpg",
+    "email": "jnicolow@hawaii.edu",
+    "phone": "(808) 594-7808",
+    "website": "https://jnicolow.github.io",
+    "summary": "I am currently an undergraduate at the University of Hawai‘i at Mānoa where I study Information and Computer Sciences. My specific interests include: data science, machine learning, and deep learning. I enjoy finding interdisciplinary applications for these interests. ",
+    "location": { "address": "", "postalCode": "96734", "city": "Kailua", "countryCode": "USA", "region": "Hawaii" },
+    "profiles": [
+      { "network": "github", "username": "jnicolow", "url": "http://github.com/jnicolow" },
+      { "network": "linkedin", "username": "joelnicolow", "url": "http://linkedin.com/in/joelnicolow" }
+    ]
+  },
+  "interests": [
+    { "name": "Data Science" },
+    { "name": "Machine Learning" },
+    { "name": "Remote Sensing" },
+    { "name": "Computer Vision" },
+    { "name": "Data Science Applications in the Climate Sciences" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "Python", "R", "Javascript"]
+    },
+    {
+      "name": "Toolsets",
+      "keywords": [ "QGIS" ]
+    },
+    {
+      "name": "OS",
+      "keywords": [ "Windows OS", "Linux" ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hawai‘i at Mānoa",
+      "area": "Computer Science (expected Spring, 2024)",
+      "studyType": "B.S.",
+      "startDate": "2019-09-01",
+      "endDate": "Present",
+      "courses": [
+      ]
+    }
+  ],
+  "work": [
+    {
+      "company": "Hawaiʻi Established Program to Stimulate Competitive research Change(HI)",
+      "position": "Undergraduate researcher",
+      "website": "https://hawaii.edu/epscor/change-hi/",
+      "startDate": "2023-01-09",
+      "endDate": "Present",
+      "summary": "Undergraduate researcher using machine learning and data science tools to extract environmental information from images.",
+      "highlights": [
+        "Machine Learning",
+        "Computer vision"
+      ]
+    },
+    {
+      "company": "Climate Resilience Collaborative",
+      "position": "Introductory Remote Sensing Specialist",
+      "website": "https://www.soest.hawaii.edu/crc/",
+      "startDate": "2022-03-23",
+      "endDate": "Present",
+      "summary": "Introductory Remote Sensing Specialist at the Climate Resilience Collaborative in SOEST. Working with APIs and geospatial data in Python 3 including contour extraction and the use of machine learning toolkits for pixel classification and other computervision tasks. In addition to technical writing for grant applications and public speaking; presenting at the 2023 Pacific Rim Geospatial Conference in Honolulu.",
+      "highlights": [
+        "Python",
+        "Machine Learning",
+        "Computer Vision",
+        "Remote Sensing",
+        "Grant Writing",
+        "Presentation Skills",
+        "QGIS"
+      ]
+    },
+    {
+      "company": "University of Hawaiʻi at Mānoa",
+      "position": "Student Research",
+      "website": "https://agu2022fallmeeting-agu.ipostersessions.com/Default.aspx?s=E6-2A-D7-F0-F6-E6-F4-00-C6-A0-30-24-43-CE-7B-82",
+      "startDate": "2021-02-01",
+      "endDate": "2023-01-01",
+      "summary": "Conducting Geographic and environmental research that relies on deep learning image classification components to further understanding of the environmental conditions on Hawaiian mountains. Awarded Associated Students of the University of Hawaiʻi at Mānoa Research Award (Spring 2021). Using Python for data visualization, storage, and analysis including deep learning models that classify images based off of environmental conditions. Co-authored posters for the Hawaiʻi Conservation Conference and the American Geophysical Union.",
+      "highlights": [
+        "Python",
+        "Grant Writing",
+        "Machine learning",
+        "Computer Vision"
+        
+      ]
+    },
+    {
+      "company": "CyberInfrastructure TRaining for Undergraduates in Summer (CITRUS) Hawaiʻi Data Science Institute",
+      "position": "Internship",
+      "website": "https://datascience.hawaii.edu/tag/citrus/",
+      "startDate": "2022-06-01",
+      "endDate": "2022-07-01",
+      "summary": "One-month program developing key skills and abilities in CyberInfrastructure (CI) with a climate-focused research project applying CI skills. Skills developed in data science, analytics, and visualization.",
+      "highlights": [
+        "Data Visualization",
+        "Public Speaking",
+        "Machine Learning",
+        "Python"
+      ]
+    },
+    {
+      "company": "University of Hawaiʻi - Thompson School of Social Work & Public Health",
+      "position": "Data Analyst",
+      "website": "",
+      "startDate": "2022-04-10",
+      "endDate": "2022-08-10",
+      "summary": "Using the R programming language to aggregate observational data.",
+      "highlights": [
+        "R"
+      ]
+    },
+    {
+      "company": "Pacific Health Analytics Collaborative",
+      "position": "Research Assistant",
+      "website": "https://www.hawaii.edu/aging/phac/",
+      "startDate": "2019-09-19",
+      "endDate": "2022-03-15",
+      "summary": "Undergraduate research assistant, member of the analytics team.",
+      "highlights": [
+        "R",
+        "JavaScript",
+        "HTML/CSS",
+        "Web Scraping",
+        "PowerBI"
+      ]
+    },
+    {
+      "company": "Honolulu Community College",
+      "position": "Student Research",
+      "website": "https://agu2020fallmeeting-agu.ipostersessions.com/Default.aspx?s=76-A1-DE-D7-1F-32-28-4A-73-E8-86-7C-F9-C4-92-52",
+      "startDate": "2020-04-01",
+      "endDate": "2020-12-17",
+      "summary": "Conducted research under Dr. DeLay related to the environmental conditions on Hawaiian mountains. Used R and Python to visualize, store, and wrangle temperature, relative humidity, and other meteorological data. Co-authored published abstract for the American Geophysical Union.",
+      "highlights": [
+        "R",
+        "Python"
+        
+      ]
+    },
+     {
+      "company": "University of Hawaiʻi at Mānoa",
+      "position": "Student Research",
+      "website": "",
+      "startDate": "2020-09-01",
+      "endDate": "2022-05-07",
+      "summary": "Conducting research on taxation and diet in the Pacific. Awarded Undergraduate Research Opportunities Program Project Funding (Fall 2020). Creating an R framework to automate data acquisition and analysis. Presented UH Mānoa Undergraduate Showcase (Spring 2022)",
+      "highlights": [
+        "R",
+        "Web Scraping"
+        
+      ]
+    },
+    {
+      "company": "Kupu",
+      "position": "Team member",
+      "website": "",
+      "startDate": "2019-05-01",
+      "endDate": "2019-08-20",
+      "summary": "Hawaiʻi Youth Conservation CORPS. Project presentation at Kupu Hoʻike.",
+      "highlights": [
+        "Public Speaking"
+      ]
+    },
+    {
+      "company": "Hawaiʻi State Department of Health",
+      "position": "Behavioral Health Student",
+      "website": "",
+      "startDate": "2018-08-01",
+      "endDate": "2019-05-01",
+      "summary": "Completed fellowship at the Behavioral Health Administration, Alcohol and Drug Abuse division. Compiled a complete list of substance use treatment providers in Hawai‘i.",
+      "highlights": [
+        "Microsoft Excel"
+      ]
+    }
+    
+    
+  ],
+  "volunteer": [
+    {
+      "organization": "Hoʻokuaʻāina",
+      "website": "https://hookuaaina.org/",
+      "position": "Loʻi (kalo farm) in Kailua",
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-2",
+      "summary": "During the summer of 2022 while living in Kailua I went to Hoʻokuaʻāina when I had avaible days because Hawaiʻi's food sustainibility and mālama ʻāina are very important to me.",
+      "highlights": []
+    }
+    
+  ],
+  "awards": [
+     {
+      "title": "Research Award",
+      "date": "Spring 2021",
+      "awarder": "Associated Students of the University of Hawaiʻi",
+      "summary": "Research award obtained to finance trail cameras for meteorologic research on Mount Kaʻala"
+    },
+    {
+      "title": "Project funding",
+      "date": "Fall 2020",
+      "awarder": "Undergraduate Research Oppertunities Program, University of Hawaiʻi at Mānoa",
+      "summary": "Project funding for research on import taxation in the Pacific"
+    }
+   
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
