@@ -4,7 +4,7 @@ type: essay
 title: "JavaScript, Unleash Its Full Potential"
 # All dates must be YYYY-MM-DD format!
 date: 2023-01-18
-published: false
+published: true
 labels:
   - JavaScript
 ---
