@@ -4,7 +4,7 @@ type: project
 image: img/fog/agu23_poster_square.png
 title: "AGU23"
 date: 2023-12-11
-published: True
+published: true
 labels:
   - Fog
   - Cloud water interception
