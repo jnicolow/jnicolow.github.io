@@ -6,7 +6,7 @@ title: "CoastVision"
 date: 2024
 published: true
 labels:
-  -Python
+  - Python
   - Machine Learning
   - Image Segmentation
   - Satellite Derived Shorelines
