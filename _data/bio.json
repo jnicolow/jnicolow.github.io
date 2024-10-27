@@ -11,7 +11,7 @@
     "profiles": [
       { "network": "github", "username": "jnicolow", "url": "http://github.com/jnicolow" },
       { "network": "linkedin", "username": "joelnicolow", "url": "http://linkedin.com/in/joelnicolow" },
-      { "network": "Google Scholar", "username": "Joel Nicolow", "url": "https://scholar.google.com/citations?user=zSGvQXcAAAAJ&hl=en" }
+      { "network": "scholar", "username": "Joel Nicolow", "url": "https://scholar.google.com/citations?user=zSGvQXcAAAAJ&hl=en" }
     ]
   },
   "interests": [
