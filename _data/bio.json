@@ -62,8 +62,8 @@
       "endDate": "Present",
       "summary": "",
       "highlights": [
-        "Training and evaluating U-net and other convolution-based image segmentation models in <b>Pytorch</b> and <b>TensorFlow</b> to segment coastal features such as beach area and the land/water interface.",
-        "Created an open-source Python Framework named CoastVision which downloads PlanetScope imagery for a given area of interest, then segments the shoreline in each image <a href="https://github.com/Climate-Resilience-Collaborative/CoastVision">https://github.com/Climate-Resilience-Collaborative/CoastVision</a>"
+        "Training and evaluating U-net and other convolution-based image segmentation models in Pytorch and TensorFlow to segment coastal features such as beach area and the land/water interface.",
+        "Created an open-source Python Framework named CoastVision which downloads PlanetScope imagery for a given area of interest, then segments the shoreline in each image"
       ]
     },
     {
@@ -74,7 +74,7 @@
       "endDate": "Present",
       "summary": "",
       "highlights": [
-        "Training and evaluating <b>image classification</b> and regression models with ResNet backbones in Pytorch",
+        "Training and evaluating image classification and regression models with ResNet backbones in Pytorch",
         "Answer phone and email responses to the ITS Help Desk"
       ]
     }
