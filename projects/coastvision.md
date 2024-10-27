@@ -21,4 +21,4 @@ CoastVision is inspired by <a href="https://github.com/kvos/CoastSat">CoastSat</
 
 <img class="img-fluid" src="../img/coastvision/stages_plot.jpg">
  
-Source: <a href="https://github.com/Climate-Resilience-Collaborative/CoastVision">https://github.com/Climate-Resilience-Collaborative/CoastVision</a>
+Github Repo: <a href="https://github.com/Climate-Resilience-Collaborative/CoastVision">https://github.com/Climate-Resilience-Collaborative/CoastVision</a>
