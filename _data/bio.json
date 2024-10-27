@@ -1,45 +1,46 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
+    "name": "Joel Curtis Nicolow",
+    "label": "Graduate Research Assistant",
+    "picture": "https://github.com/jnicolow.png",
     "email": "molly@hawaii.edu",
     "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
+    "website": "https://jnicolow.github.io",
+    "summary": "I am a Master’s student at the University of Hawai‘i Manoa where I study Computer Science. I expect to graduate in Spring 2025",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "jnicolow", "url": "http://github.com/jnicolow" },
+      { "network": "linkedin", "username": "joelnicolow", "url": "http://linkedin.com/in/joelnicolow" },
+      { "network": "Google Scholar", "username": "Joel Nicolow", "url": "https://scholar.google.com/citations?user=zSGvQXcAAAAJ&hl=en" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
+    { "name": "Machine Learning" },
+    { "name": "Computer Vision" },
+    { "name": "Deep Learning" },
     { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "Environmental Science" }
   ],
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
+      "keywords": [ "Python", "Pytorch", "TensorFlow", "R" ]
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
+      "keywords": [ "Windows", "Ubuntu", "Git/GitHub", "SLURM" ]
     }
   ],
   "education": [
     {
       "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
+      "area": "Computer Science",
       "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
+      "startDate": "2019-09-01",
+      "endDate": "2024-08-09",
       "courses": [
+        "Algorithms", "Database Systems", "Big Data Analytics", "Data Science Fundamentals", "Introduction to Machine Learning", "Machine Learning Fundamentals", "Advanced Artificial
+Intelligence", "Deep Learning", "Machine Learning Paper Discussion Seminar", "Probability and Statistics", "Calculus (full series)", "Linear Algebra"
       ]
     }
   ],
