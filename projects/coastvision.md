@@ -17,6 +17,6 @@ summary: "CoastVision is an open-source Python framework geared towards generati
 CoastVision is inspired by <a href="https://github.com/kvos/CoastSat">CoastSat</a> and <a href="https://github.com/ydoherty/CoastSat.PlanetScope">CoastSat.PlanetScope</a> with the key differences being CoastVision's inclusion of an API to download PlanetScope imagery and how shoreline contours are extracted. CoastSat.PlanetScope classifies each pixel as white-water, water, sand, or other land; then using a thresholding algorithm such as peak fraction on the normalized difference water index. CoastVision classifies pixels as either land or water and then uses the marching squares algorithm to delineate a shoreline between the land and water classes.
 
 
-<img class="img-fluid" src="../img/vacay/vacay-home-page.png">
+<img class="img-fluid" src="../img/coastvision/stages_plot.png">
  
 Source: <a href="https://github.com/Climate-Resilience-Collaborative/CoastVision">https://github.com/Climate-Resilience-Collaborative/CoastVision</a>
