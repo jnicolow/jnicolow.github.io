@@ -35,26 +35,35 @@
     {
       "institution": "University of Hawaii, Honolulu, HI",
       "area": "Computer Science",
-      "studyType": "B.S.",
+      "studyType": "M.S.",
+      "startDate": "2014-09-27",
+      "endDate": "Present",
+      "courses": [
+        "Machine Learning Fundamentals", "Advanced Artificial Intelligence", "Deep Learning", "Machine Learning Paper Discussion Seminar", "Probability and Statistics Topics Seminar"
+      ]
+    },
+    {
+      "institution": "University of Hawaii, Honolulu, HI",
+      "area": "Computer Science",
+      "studyType": "B.S. with Honors",
       "startDate": "2019-09-01",
       "endDate": "2024-08-09",
       "courses": [
-        "Algorithms", "Database Systems", "Big Data Analytics", "Data Science Fundamentals", "Introduction to Machine Learning", "Machine Learning Fundamentals", "Advanced Artificial
-Intelligence", "Deep Learning", "Machine Learning Paper Discussion Seminar", "Probability and Statistics", "Calculus (full series)", "Linear Algebra"
+        "Algorithms", "Database Systems", "Big Data Analytics", "Data Science Fundamentals", "Introduction to Machine Learning", "Machine Learning Fundamentals", "Machine Learning Paper Discussion Seminar", "Probability and Statistics", "Calculus (full series)", "Linear Algebra"
       ]
     }
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
+      "company": "Climate Resilience Collaborative, University of Hawaii at Manoa",
+      "position": "Graduate Research Assistant",
+      "website": "https://www.soest.hawaii.edu/crc/",
+      "startDate": "2024-09-19",
       "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "summary": "",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Training and evaluating U-net and other convolution-based image segmentation models in <b>Pytorch</b> and <b>TensorFlow</b> to segment coastal features such as beach area and the land/water interface.",
+        "Created an open-source Python Framework named CoastVision which downloads PlanetScope imagery for a given area of interest, then segments the shoreline in each image <a href="https://github.com/Climate-Resilience-Collaborative/CoastVision">https://github.com/Climate-Resilience-Collaborative/CoastVision</a>"
       ]
     },
     {
