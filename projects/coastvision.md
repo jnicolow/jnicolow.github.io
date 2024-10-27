@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/vacay/vacay-square.png
+image: img/coastvision/coastvision_thumbnail.png
 title: "CoastVision"
 date: 2024
 published: true
