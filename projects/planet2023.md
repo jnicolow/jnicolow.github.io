@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/agu23/agu23_poster_square.png
+image: img/planet2023/planet_presentation_square.jpg
 title: "AGU23"
 date: 2023-12-11
 published: True
