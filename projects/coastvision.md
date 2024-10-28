@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/coastvision/coastvision_thumbnail.png
 title: "CoastVision"
-date: 2024
+date: 2024-09-19
 published: true
 labels:
   - Python
