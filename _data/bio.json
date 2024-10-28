@@ -63,62 +63,101 @@
       "summary": "",
       "highlights": [
         "Training and evaluating U-net and other convolution-based image segmentation models in Pytorch and TensorFlow to segment coastal features such as beach area and the land/water interface.",
-        "Created an open-source Python Framework named CoastVision which downloads PlanetScope imagery for a given area of interest, then segments the shoreline in each image"
+        "Created an open-source Python Framework named CoastVision which downloads PlanetScope imagery for a given area of interest, then segments the shoreline in each image",
+        "CoastVision framework was used to measure coastal erosion rates across the island of Oahu which are used to inform policy decisions"
       ]
     },
     {
       "company": "Water Resources Research Center, University of Hawaii at Manoa",
       "position": "Machine Learning Engineer",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2024-1014",
+      "website": "https://www.wrrc.hawaii.edu/",
+      "startDate": "2024-10-14",
       "endDate": "Present",
       "summary": "",
       "highlights": [
         "Training and evaluating image classification and regression models with ResNet backbones in Pytorch",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Predicting fog presence and visibility from trail camera images on Hawaiian mountains using these models"
+      ]
+    },
+    {
+      "company": "Hawaii Established Program to Stimulate Competitive Research Change(HI)",
+      "position": "Undergraduate Researcher",
+      "website": "https://hawaii.edu/epscor/research/",
+      "startDate": "2023-03-01",
+      "endDate": "2024-05-01",
+      "summary": "",
+      "highlights": [
+        "Training and evaluating image classification and regression models with ResNet backbones in Pytorch",
+        "Trained and evaluated machine learning models using Scikit-learn to classify fog presence in trail camera images based on engineered image features",
+        "Poster presentation at the 2023 American Geophysical Union’s Fall Meeting in San Francisco",
+        "Poster Presentation at the 20204 Hawaii Conservation Conference",
+        "Awarded Outstanding Undergraduate Student Poster Presentation at the 2024 Hawaii Conservation Conference"
+      ]
+    },
+    {
+      "company": "The University of Hawaii Manoa, Honolulu Community College",
+      "position": "Undergraduate Researcher",
+      "website": "https://hawaii.edu/epscor/research/",
+      "startDate": "2021-03-01",
+      "endDate": "2023-03-01",
+      "summary": "",
+      "highlights": [
+        "Trained and evaluated machine learning models using Scikit-learn to classify fog presence in trail camera images based on engineered image features",
+        "Created Python framework to process relative humidity, temperature, and dew point data from multiple meteorologic stations",
+        "Successfully attained funding from the Associated Students of the University of Hawaii",
+        "Poster Presentation at the 20204 Hawaii Conservation Conference",
+        "Co-author on published poster in the Hawai‘i Conservation Conference July 2022",
+        "Co-author on published poster in the American Geophysical Union December 2022"
+      ]
+    },
+    {
+      "company": "Pacific Health Analytics Collaborative, University of Hawaii Manoa",
+      "position": "Research Assistant",
+      "website": "https://hawaii.edu/epscor/research/",
+      "startDate": "2019-09-18",
+      "endDate": "2022-03-01",
+      "summary": "",
+      "highlights": [
+        "Created R frameworks to automate web scraping of data dashboards",
+        "Generated aggregate data tables from observation-level data using LaTex and R",
+        "Helped develop the Hawaii Behavioral Health Dashboard using R, Power BI, JavaScript, HTML, and CSS",
+        "Co-author on Hawaii Opioid Initiative Evaluation Report 2020",
+        "Co-author on Hawaii State Plan for a Data-Driven System of Care on Substance Use 2022"
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
-      ]
+      "organization": "Hoʻokuaʻāina",
+      "website": "https://hookuaaina.org/",
+      "position": "Loʻi (kalo farm) in Kailua",
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-2",
+      "summary": "During the summer of 2022 while living in Kailua I went to Hoʻokuaʻāina when I had available days because Hawaiʻi's food sustainability and mālama ʻāina are very important to me.",
+      "highlights": []
     }
+    
   ],
   "awards": [
-    {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+     {
+      "title": "Outstanding Undergraduate Student Poster Presentation Award",
+      "date": "August 1st, 2024",
+      "awarder": "Hawaiʻi Conservation Alliance & The Wildlife Society: Hawaiʻi Chapter",
+      "summary": "I was honored to be awarded the ‘Outstanding Undergraduate Student Poster Presentation’ award at the 2024 Hawaiʻi Conservation Conference for my poster 'A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images'"
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Research Award",
+      "date": "Spring 2021",
+      "awarder": "Associated Students of the University of Hawaiʻi",
+      "summary": "Research award obtained to finance trail cameras for meteorologic research on Mount Kaʻala"
+    },
+    {
+      "title": "Project funding",
+      "date": "Fall 2020",
+      "awarder": "Undergraduate Research Opportunities Program, University of Hawaiʻi at Mānoa",
+      "summary": "Project funding for research on import taxation in the Pacific"
     }
+   
   ],
   "references": [
     {
