@@ -1,0 +1,27 @@
+---
+layout: project
+type: project
+image: img/agu23/agu23_poster_square.png
+title: "AGU23"
+date: 2023-12-11
+published: True
+labels:
+  - Fog
+  - Cloud water interception
+  - Image classification
+  - Machine learning
+  - Computer vision
+
+summary: "A Machine Learning Toolkit for Fog Precense Classification"
+---
+This webpage provides more information on my AGU poster  
+FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images  
+[Joel Nicolow](https://jnicolow.github.io/)  
+[jnicolow@hawaii.edu](jnicolow@hawaii.edu)  
+[View pdf](https://github.com/jnicolow/jnicolow.github.io/blob/main/img/agu23/AGU2023poster_nicolow_joel.pdf)
+
+<img class="img-fluid" src="../img/agu23/agu23_poster.jpg">
+<img class="img-fluid" src="../img/agu23/AGU2023poster.jpg">
+
+
+
