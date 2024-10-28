@@ -2,7 +2,7 @@
 ---
 layout: project
 type: project
-image: img/coast/planet_presentation_square.jpg
+image: img/planet2023/planet_presentation_square.jpg
 title: "Lightning Talk at Planet Labs"
 date: 2023-12-12
 published: True
