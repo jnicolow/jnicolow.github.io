@@ -2,26 +2,21 @@
 layout: project
 type: project
 image: img/planet2023/planet_presentation_square.jpg
-title: "AGU23"
-date: 2023-12-11
+title: "Lightning Talk at Planet Labs"
+date: 2023-12-12
 published: True
 labels:
-  - Fog
-  - Cloud water interception
-  - Image classification
+  - Satellites
+  - Earth observation
+  - Image segmentation
   - Machine learning
-  - Computer vision
+  - Coastal Erosion
 
-summary: "A Machine Learning Toolkit for Fog Precense Classification"
+summary: "Lightning talk at Planet Labs’ 'Rise of the Planetary Variables' event at Planet Headquarters in San Francisco, December 2023"
 ---
-This webpage provides more information on my AGU poster  
-FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images  
-[Joel Nicolow](https://jnicolow.github.io/)  
-[jnicolow@hawaii.edu](jnicolow@hawaii.edu)  
-[View pdf](https://github.com/jnicolow/jnicolow.github.io/blob/main/img/agu23/AGU2023poster_nicolow_joel.pdf)
+On December 12th, 2023 I gave a lightning talk at [Planet](https://www.planet.com/company/) Headquarters in Sand Francisco on how we at the [Climate Resilience Collaborative](https://www.soest.hawaii.edu/crc/) user their satellite imagery to monitor coastal erosion along sandy coastlines.
 
-<img class="img-fluid" src="../img/agu23/agu23_poster.jpg">
-<img class="img-fluid" src="../img/agu23/AGU2023poster.jpg">
+<img class="img-fluid" src="../img/planet2023/planet_presentation.jpg">
 
 
 
