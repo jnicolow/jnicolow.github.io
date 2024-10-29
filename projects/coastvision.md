@@ -13,7 +13,7 @@ labels:
   - Image segmentation
   - Satellite-derived shorelines
   - GitHub
-summary: "CoastVision is an open-source Python framework geared towards generating satellite-derived shorelines (SDS) in PlanetScope imagery. Given a time window and an area of interest (AOI) CoastVision will download applicable PlanetScope satellite imagery, extract shorelines, and compute transect intersections."
+summary: "CoastVision is an open-source Python framework geared towards generating satellite-derived shorelines (SDS) in PlanetScope imagery."
 ---
 
 CoastVision is an open-source Python framework geared towards generating satellite-derived shorelines (SDS) in <a href="https://developers.planet.com/docs/data/planetscope/">PlanetScope</a> imagery. Given a time window and an area of interest (AOI) CoastVision will download applicable PlanetScope satellite imagery, extract shorelines, and compute transect intersections.
