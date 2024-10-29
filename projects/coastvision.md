@@ -7,9 +7,11 @@ date: 2024-09-19
 published: true
 labels:
   - Python
-  - Machine Learning
-  - Image Segmentation
-  - Satellite Derived Shorelines
+  - Pytorch
+  - Unet
+  - Machine learning
+  - Image segmentation
+  - Satellite-derived shorelines
   - GitHub
 summary: "CoastVision is an open-source Python framework geared towards generating satellite-derived shorelines (SDS) in PlanetScope imagery. Given a time window and an area of interest (AOI) CoastVision will download applicable PlanetScope satellite imagery, extract shorelines, and compute transect intersections."
 ---
