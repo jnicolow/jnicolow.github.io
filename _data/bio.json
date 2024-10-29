@@ -24,11 +24,11 @@
   "skills": [
     {
       "name": "Languages and Frameworks",
-      "keywords": [ "Python", "Pytorch", "TensorFlow", "R" ]
+      "keywords": [ "Python", "Pytorch", "TensorFlow", "scikit-learn", "R" ]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "Windows", "Ubuntu", "Git/GitHub", "SLURM" ]
+      "name": "Toolsets",
+      "keywords": ["Git/GitHub", "SLURM", "QGIS"]
     }
   ],
   "education": [
