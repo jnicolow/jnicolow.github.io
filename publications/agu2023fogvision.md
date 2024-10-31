@@ -1,6 +1,6 @@
 ---
 layout: essay
-type: essay
+type: publication
 title: "Aloha Plants"
 date: 2023-12-12
 labels:
