@@ -8,19 +8,7 @@
 
     <div class="row g-3">
       <p>This is where publications will appear</p>
-      <p>Number of publications: {{ publication_pages.size }}</p>
-  
-      <p>Publication details:</p>
-      <ul>
-        {% for page in publication_pages %}
-          <li>Title: {{ page.title }}, URL: {{ page.url }}, Date: {{ page.date }}</li>
-        {% endfor %}
-      </ul>
-
-
-
-
-      
+            
       {% assign publication_pages = site.pages | where: "type", "publication" | sort: "date" | reverse %}
       {% for page in publication_pages %}
         {% unless page.draft %}
@@ -30,6 +18,15 @@
           {% break %}
         {% endif %}
       {% endfor %}
+
+      <p>Number of publications: {{ publication_pages.size }}</p>
+  
+      <p>Publication details:</p>
+      <ul>
+        {% for page in publication_pages %}
+          <li>Title: {{ page.title }}, URL: {{ page.url }}, Date: {{ page.date }}</li>
+        {% endfor %}
+      </ul>
     </div>
 
     {% if publication_pages.size > include.limit %}
