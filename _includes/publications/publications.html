@@ -7,8 +7,8 @@
     </div>
 
     <div class="row g-3">
-      {% assign paper_pages = site.pages | where: "type", "paper" | sort: "date" | reverse %}
-      {% for page in paper_pages %}
+      {% assign publication_pages = site.pages | where: "type", "paper" | sort: "date" | reverse %}
+      {% for page in publication_pages %}
         {% unless page.draft %}
           {% include publications/publications-card.html page=page %}
         {% endunless %}
