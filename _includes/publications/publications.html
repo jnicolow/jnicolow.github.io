@@ -19,7 +19,7 @@
       {% endfor %}
 
      {% assign not_draft = 0 %}
-      {% for page in essay_pages %}
+      {% for page in publication_pages %}
       {% unless page.draft %}
         {% assign not_draft = not_draft | plus: 1 %}
       {% endunless %}
