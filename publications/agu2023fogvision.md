@@ -2,6 +2,7 @@
 layout: publication
 type: publication
 title: "FogVision: A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images"
+venue: American Geophysical Union
 date: 2023-12-12
 labels:
   - Image classification
