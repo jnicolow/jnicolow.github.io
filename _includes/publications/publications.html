@@ -18,11 +18,17 @@
         {% endif %}
       {% endfor %}
 
-      <p>IS the big before or after this?</p>
+     {% assign not_draft = 0 %}
+      {% for page in essay_pages %}
+      {% unless page.draft %}
+        {% assign not_draft = not_draft | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+  </div>
 
-    
-    {% if publication_pages.size > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/publications/">See all {{ publication_pages }} Publications</a></p>
+
+    {% if not_draft > include.limit %}
+      <p class="text-center pt-4"><a href="{{ site.baseurl}}/essays/">See all {{ not_draft }} essays</a></p>
     {% endif %}
 
   </div>
