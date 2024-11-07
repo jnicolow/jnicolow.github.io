@@ -56,3 +56,46 @@ a {
   background-color: var(--bs-white);
   border-top: none;
 }
+
+/* General styling for the publication items */
+.publication-item {
+  border-bottom: 1px solid #ddd; /* Thin line between items */
+  padding-bottom: 10px; /* Space below each item */
+}
+
+.publication-content {
+  padding-top: 10px; /* Space above each item */
+}
+
+/* Style for titles and venue */
+.publication-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.publication-venue {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+/* Style for the date */
+.publication-date {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+/* Style for the labels */
+.publication-labels {
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: var(--tf-pill-bg);
+  margin-right: 5px; /* Space between badges */
+}
+
+/* Button styling */
+.btn-outline-dark {
+  font-size: 0.9em;
+}
+
