@@ -1,18 +1,18 @@
-<div class="col-md-6 col-lg-4" xmlns="http://www.w3.org/1999/html">
-  <div class="card h-100">
-    <div class="card-body">
-      <h5 class="card-title">{{ include.page.title }}</h5>
-      <h6 class="card-text">{{ include.page.venue }}</h6>
-      <p class="card-text"><small class="text-muted">{{ include.page.date | date_to_string }}</small></p>
-      <p class="card-text">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
-      <p>
-        {% for label in include.page.labels %}
-        <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
-        {% endfor %}
-      </p>
+
+
+<div class="col-12 publication-item">
+  <div class="publication-content py-2">
+    <h5 class="publication-title">{{ include.page.title }}</h5>
+    <h6 class="publication-venue">{{ include.page.venue }}</h6>
+    <p class="publication-date text-muted">{{ include.page.date | date_to_string }}</p>
+    <p class="publication-description">{{ include.page.content | markdownify | strip_html | truncatewords: 40 }}</p>
+    <div class="publication-labels">
+      {% for label in include.page.labels %}
+        <span class="badge rounded-pill">{{ label }}</span>
+      {% endfor %}
     </div>
-    <div class="card-footer">
-      <div class="text-center"><a href="{% if page.publicationurl %}{{ page.publicationurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a></div>
+    <div class="text-end">
+      <a href="{% if page.publicationurl %}{{ page.publicationurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a>
     </div>
   </div>
 </div>
