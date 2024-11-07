@@ -6,8 +6,7 @@
       </div>
     </div>
 
-    <div class="row g-3">
-            
+    <div class="publication-list">
       {% assign publication_pages = site.pages | where: "type", "publication" | sort: "date" | reverse %}
       {% for page in publication_pages %}
         {% unless page.draft %}
@@ -17,19 +16,17 @@
           {% break %}
         {% endif %}
       {% endfor %}
+    </div>
 
-     {% assign not_draft = 0 %}
-      {% for page in publication_pages %}
+    {% assign not_draft = 0 %}
+    {% for page in publication_pages %}
       {% unless page.draft %}
         {% assign not_draft = not_draft | plus: 1 %}
       {% endunless %}
     {% endfor %}
-  </div>
-
 
     {% if not_draft > include.limit %}
       <p class="text-center pt-4"><a href="{{ site.baseurl}}/publications/">See all {{ not_draft }} publications & presentations</a></p>
     {% endif %}
-
   </div>
 </div>
