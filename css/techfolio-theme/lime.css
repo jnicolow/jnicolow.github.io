@@ -99,3 +99,18 @@ a {
   font-size: 0.9em;
 }
 
+/* Container for the image thumbnail */
+.thumbnail-container {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  margin-right: 15px; /* Space between the image and publication details */
+}
+
+/* Style for the image thumbnail */
+.thumbnail-image {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Maintain a consistent height */
+  object-fit: cover; /* Crop the image to fit the container */
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+
