@@ -19,7 +19,7 @@
     </div>
 
     {% assign not_draft = 0 %}
-    {% for page in publication_pages %}
+    {% for page in newsevent_pages %}
       {% unless page.draft %}
         {% assign not_draft = not_draft | plus: 1 %}
       {% endunless %}
