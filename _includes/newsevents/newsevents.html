@@ -1,0 +1,32 @@
+<div style="background-color: var(--bs-white)" class="bg-gradient py-3" id="newsevents">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <h1 class="display-4 text-start">News</h1>
+      </div>
+    </div>
+
+    <div class="publication-list">
+      {% assign newsevent_pages = site.pages | where: "type", "newsevent" | sort: "date" | reverse %}
+      {% for page in newsevent_pages %}
+        {% unless page.draft %}
+          {% include newsevent/newsevent-card.html page=page %}
+        {% endunless %}
+        {% if forloop.index == include.limit %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% assign not_draft = 0 %}
+    {% for page in publication_pages %}
+      {% unless page.draft %}
+        {% assign not_draft = not_draft | plus: 1 %}
+      {% endunless %}
+    {% endfor %}
+
+    {% if not_draft > include.limit %}
+      <p class="text-center pt-4"><a href="{{ site.baseurl}}/newsevents/">See all {{ not_draft }} news</a></p>
+    {% endif %}
+  </div>
+</div>
