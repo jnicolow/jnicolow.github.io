@@ -3,7 +3,6 @@
     <!-- Publication Details -->
     <div class="publication-details">
       <h5 class="publication-title">{{ include.page.title }}</h5>
-      <h6 class="publication-venue">{{ include.page.venue }}</h6>
       <p class="publication-date text-muted">{{ include.page.date | date_to_string }}</p>
       <p class="publication-description">{{ include.page.citation | markdownify | truncatewords: 40 }}</p> <!--strip_html was removed because we want bold for my name in author list -->
       <div class="publication-labels">
@@ -12,7 +11,7 @@
         {% endfor %}
       </div>
       <div class="text-end">
-        <a href="{% if page.publicationurl %}{{ page.publicationurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a>
+        <a href="{% if page.newseventurl %}{{ page.newseventurl }}{% else %}{{ site.baseurl}}{{ include.page.url }}{% endif %}" class="btn btn-outline-dark">Read More</a>
       </div>
     </div>
 
