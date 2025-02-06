@@ -80,6 +80,19 @@
       ]
     },
     {
+      "company": "Climate Resilience Collaborative, University of Hawaii at Manoa",
+      "position": "Introductory Remote Sensing Specialist",
+      "website": "https://www.soest.hawaii.edu/crc/",
+      "startDate": "2022-03-15",
+      "endDate": "2024-09-18",
+      "summary": "",
+      "highlights": [
+        "Working with APIs to download PlanetScope and Google Earth Engine satellite imagery",
+        "Training and evaluating pixel classification image segmentation models in scikit-learn learn to segment coastal features such as beach area and the land/water interface.",
+        "Created Python framework to download imagery and perform image segmentation on it to track coastal changes",
+      ]
+    },
+    {
       "company": "Hawaii Established Program to Stimulate Competitive Research Change(HI)",
       "position": "Undergraduate Researcher",
       "website": "https://hawaii.edu/epscor/research/",
