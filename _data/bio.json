@@ -88,7 +88,7 @@
       "summary": "",
       "highlights": [
         "Working with APIs to download PlanetScope and Google Earth Engine satellite imagery",
-        "Training and evaluating pixel classification image segmentation models in scikit-learn learn to segment coastal features such as beach area and the land/water interface.",
+        "Training and evaluating pixel classification image segmentation models in Scikit-learn learn to segment coastal features such as beach area and the land/water interface.",
         "Created Python framework to download imagery and perform image segmentation on it to track coastal changes",
       ]
     },
