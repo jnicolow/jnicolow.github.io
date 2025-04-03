@@ -15,6 +15,7 @@
     ]
   },
   "interests": [
+    { "name": "Data Science" },
     { "name": "Machine Learning" },
     { "name": "Computer Vision" },
     { "name": "Deep Learning" },
