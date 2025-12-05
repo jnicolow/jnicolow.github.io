@@ -1,20 +1,18 @@
 ---
 layout: publication
 type: publication
-title: "A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images"
-venue: Hawaii Conservation Conference
-date: 2024-07-29
-citation: <strong>Nicolow, J.</strong>, Sadowski, P., DeLay, J., Juvik, J., T., Tseng, H., & G., Giambelluca (2024). A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images. Hawai‘i Conservation Conference.
-image: /img/hcc2024/fog_image_examples.png
+title: "Satellite-Derived Shorelines"
+venue: University of Hawaiʻi at Mānoa
+date: 2025-12-15
+citation: <strong>Nicolow, J.</strong>, Mikkelsen, A., Sadowski, P., Fletcher, C. (2024). Satellite-Derived Shorelines. UH ICS Grad Poster Session.
+image: 
 labels:
-  - Image classification
-  - Feature engineering
+  - Image segmentation
+  - Satellite-derived shorelines
   - Machine learning
-  - Cloud forest
-  - Fog
+  - Coastal monitoring
 ---
 
 
-**Nicolow, J.**, Sadowski, P., DeLay, J., Juvik, J., T., Tseng, H., & G., Giambelluca (2024). A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images. Hawai‘i Conservation Conference.
-
+**Nicolow, J.**, Mikkelsen, A., Sadowski, P., Fletcher, C. (2024). Satellite-Derived Shorelines. UH ICS Grad Poster Session.
 <img class="img-fluid" src="../img/hcc2024/hcc2024.png">
