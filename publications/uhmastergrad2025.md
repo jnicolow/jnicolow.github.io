@@ -1,0 +1,20 @@
+---
+layout: publication
+type: publication
+title: "A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images"
+venue: Hawaii Conservation Conference
+date: 2024-07-29
+citation: <strong>Nicolow, J.</strong>, Sadowski, P., DeLay, J., Juvik, J., T., Tseng, H., & G., Giambelluca (2024). A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images. Hawai‘i Conservation Conference.
+image: /img/hcc2024/fog_image_examples.png
+labels:
+  - Image classification
+  - Feature engineering
+  - Machine learning
+  - Cloud forest
+  - Fog
+---
+
+
+**Nicolow, J.**, Sadowski, P., DeLay, J., Juvik, J., T., Tseng, H., & G., Giambelluca (2024). A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images. Hawai‘i Conservation Conference.
+
+<img class="img-fluid" src="../img/hcc2024/hcc2024.png">
