@@ -15,4 +15,4 @@ labels:
 
 
 **Nicolow, J.**, Mikkelsen, A., Sadowski, P., Fletcher, C. (2024). Satellite-Derived Shorelines. UH ICS Grad Poster Session.
-<img class="img-fluid" src="../img/hcc2024/hcc2024.png">
+<img class="img-fluid" src="../img/sds/uhmgradposter2025.png">
