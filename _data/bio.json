@@ -35,9 +35,17 @@
     {
       "institution": "University of Hawaii at Manoa, Honolulu, HI",
       "area": "Computer Science",
-      "studyType": "M.S.",
+      "studyType": "Ph.D.",
       "startDate": "2024-09-27",
       "endDate": "Present",
+      "courses": []
+    },
+    {
+      "institution": "University of Hawaii at Manoa, Honolulu, HI",
+      "area": "Computer Science",
+      "studyType": "M.S.",
+      "startDate": "2024-09-27",
+      "endDate": "2025-12-19",
       "courses": [
         "Machine Learning Fundamentals", "Advanced Artificial Intelligence", "Deep Learning", "Machine Learning Paper Discussion Seminar", "Probability and Statistics Topics Seminar", "Data Science for Engineers"
       ]
