@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/hcc2024/hcc2024_square.png
+image: img/coastvision/SDS_poster_UHCCxGoogle_march2026_thumbnail.png
 title: "Accelerating Research in the Age of AI, 2026"
 date: 2026-03-25
 published: True
