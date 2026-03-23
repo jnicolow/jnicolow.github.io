@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/hcc2024/hcc2024_square.png
 title: "Accelerating Research in the Age of AI, 2026"
-date: 2024-03-25
+date: 2026-03-25
 published: True
 labels:
   - Satellite-Derived Shorelines
