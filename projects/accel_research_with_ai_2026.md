@@ -2,24 +2,18 @@
 layout: project
 type: project
 image: img/hcc2024/hcc2024_square.png
-title: "Hawaiʻi Conservation Conference, 2024"
-date: 2024-07-31
+title: "Accelerating Research in the Age of AI, 2026"
+date: 2024-03-25
 published: True
 labels:
-  - Fog
-  - Cloud water interception
-  - Image classification
+  - Satellite-Derived Shorelines
+  - U-Net
+  - Weighted BCE loss
   - Machine learning
   - Computer vision
 
-summary: "Poster presentation 'A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images'"
+summary: "Poster presentation at Accelerating Research in the Age of AI: A Synergistic Workshop with Google on March 25th at the Sullivan Conference Center"
 ---
-I had the opportunity to present my poster titled "A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images" at the 2024 Hawaiʻi Conservation Conference. It was a great experience attending inspiring talks and meeting Hawaiʻi's brilliant conservation field!
+I had the opportunity to present my poster titled "Satellite-Derived Shorelines" at the 2026 Accelerating Research in the Age of AI: A Synergistic Workshop with Google on March 25th at the Sullivan Conference Center. It was a great experience attending inspiring talks!
 
-I was honored to be awarded the 'Outstanding Undergraduate Student Poster Presentation' award!
-
-
-
-
-<img class="img-fluid" src="../img/hcc2024/hcc2024_collage.jpg">
 <img class="img-fluid" src="../img/hcc2024/hcc2024.png">
