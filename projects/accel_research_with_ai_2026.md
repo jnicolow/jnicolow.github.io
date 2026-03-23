@@ -16,4 +16,4 @@ summary: "Poster presentation at Accelerating Research in the Age of AI: A Syner
 ---
 I had the opportunity to present my poster titled "Satellite-Derived Shorelines" at the 2026 Accelerating Research in the Age of AI: A Synergistic Workshop with Google on March 25th at the Sullivan Conference Center. It was a great experience attending inspiring talks!
 
-<img class="img-fluid" src="../img/hcc2024/hcc2024.png">
+<img class="img-fluid" src="../img/coastvision/SDS_poster_UHCCxGoogle_march2026.png">
