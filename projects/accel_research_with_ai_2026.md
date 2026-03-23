@@ -1,0 +1,25 @@
+---
+layout: project
+type: project
+image: img/hcc2024/hcc2024_square.png
+title: "Hawaiʻi Conservation Conference, 2024"
+date: 2024-07-31
+published: True
+labels:
+  - Fog
+  - Cloud water interception
+  - Image classification
+  - Machine learning
+  - Computer vision
+
+summary: "Poster presentation 'A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images'"
+---
+I had the opportunity to present my poster titled "A Machine Learning Method for Detecting Fog in Mountain Trail Camera Images" at the 2024 Hawaiʻi Conservation Conference. It was a great experience attending inspiring talks and meeting Hawaiʻi's brilliant conservation field!
+
+I was honored to be awarded the 'Outstanding Undergraduate Student Poster Presentation' award!
+
+
+
+
+<img class="img-fluid" src="../img/hcc2024/hcc2024_collage.jpg">
+<img class="img-fluid" src="../img/hcc2024/hcc2024.png">
