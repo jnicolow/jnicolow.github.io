@@ -1,209 +1,174 @@
 <template>
-  <section id="hero" class="hero-section flex flex-center">
-    <div class="hero-grid site-wrap">
-      <div class="hero-text">
-        <p class="font-mono text-secondary text-body2 q-mb-md hero-intro">Hey there!, I'm...</p>
-
-        <h1 class="hero-name font-display text-weight-bold q-mb-sm">
-          {{ personal.name }}
-        </h1>
-
-        <h2 class="hero-tagline font-display text-weight-bold q-mb-lg">
-          {{ personal.tagline }}
-        </h2>
-
-        <p class="hero-summary text-grey-5 q-mb-xl">
-          {{ personal.summary }}
-        </p>
-
-        <div class="row q-gutter-md">
-          <q-btn
-            unelevated
-            no-caps
-            color="primary"
-            text-color="dark"
-            label="View My Work"
-            class="font-mono text-weight-medium"
-            padding="12px 32px"
-            @click="scrollTo('projects')"
-          />
-          <q-btn
-            outline
-            no-caps
-            color="secondary"
-            label="Get in Touch"
-            class="font-mono text-weight-medium"
-            padding="12px 32px"
-            @click="scrollTo('contact')"
-          />
-        </div>
-      </div>
-
-      <div v-if="photos.length" class="hero-portrait gt-sm">
-        <div class="portrait-frame">
-          <img
-            v-for="(src, i) in photos"
-            :key="i"
-            :src="src"
-            :class="['portrait-img', { active: activePhoto === i }]"
-            :alt="personal.name"
-          />
-        </div>
-      </div>
+  <section id="hero" class="hero-section">
+    <div class="hero-media" aria-hidden="true">
+      <img
+        v-if="heroPhoto"
+        :src="heroPhoto"
+        class="hero-bg active"
+        alt=""
+      />
+      <div class="hero-scrim" />
     </div>
 
-    <div class="scroll-indicator">
-      <q-icon name="mdi-chevron-down" color="secondary" size="24px" class="bounce" />
+    <div class="site-wrap hero-content">
+      <p class="hero-kicker font-mono">
+        UH Mānoa · Honolulu, HI
+      </p>
+
+      <h1 class="hero-name font-display">
+        {{ personal.name }}
+      </h1>
+
+      <p class="hero-tagline">
+        {{ personal.tagline }}
+      </p>
+
+      <p class="hero-summary">
+        {{ personal.summary }}
+      </p>
+
+      <div class="hero-actions">
+        <button type="button" class="btn-solid" @click="scrollTo('publications')">
+          Publications
+        </button>
+        <button type="button" class="btn-ghost" @click="scrollTo('experience')">
+          Employment
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
 import { personal } from 'src/data/resume'
-import { heroPhotos } from 'src/data/media'
-
-/** Every image in `src/assets/media/hero/` — random order per load (see `media.js`) */
-const photos = heroPhotos
-
-const activePhoto = ref(0)
-let rotateTimer = null
+import { heroPhoto } from 'src/data/media'
 
 function scrollTo (id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }
-
-onMounted(() => {
-  if (photos.length <= 1) return
-  rotateTimer = setInterval(() => {
-    activePhoto.value = (activePhoto.value + 1) % photos.length
-  }, 5000)
-})
-
-onUnmounted(() => {
-  clearInterval(rotateTimer)
-})
 </script>
 
 <style lang="scss" scoped>
 .hero-section {
-  min-height: 100vh;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 100px;
-}
-
-.hero-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 48px;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.hero-intro {
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.1s;
-}
-
-.hero-name {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  background: linear-gradient(135deg, #f9f8f8 40%, #F0D3A0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.2s;
-}
-
-.hero-tagline {
-  font-size: clamp(1.1rem, 3vw, 1.6rem);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  color: rgba(240, 211, 160, 0.8);
-  -webkit-text-fill-color: unset;
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.35s;
-}
-
-.hero-summary {
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: min(620px, 100%);
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.5s;
-}
-
-.hero-text .row {
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.65s;
-}
-
-/* Portrait */
-.hero-portrait {
-  animation: fadeUp 0.8s ease both;
-  animation-delay: 0.6s;
-}
-
-.portrait-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  max-width: min(440px, 100%);
-  margin: 0 auto;
-  border-radius: 8px;
+  min-height: min(92vh, 920px);
+  display: flex;
+  align-items: flex-end;
+  padding: 7rem 0 4.5rem;
   overflow: hidden;
-  border: 2px solid rgba(240, 211, 160, 0.12);
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.25),
-    0 0 80px rgba(240, 211, 160, 0.04);
+  color: #f4faf8;
 }
 
-.portrait-img {
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
-
-  &.active {
-    opacity: 1;
-  }
+  object-position: center 45%;
 }
 
-/* Scroll indicator */
-.scroll-indicator {
+.hero-scrim {
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(12, 44, 52, 0.88) 0%, rgba(12, 44, 52, 0.55) 48%, rgba(12, 44, 52, 0.28) 100%),
+    linear-gradient(0deg, rgba(12, 44, 52, 0.7) 0%, transparent 50%);
 }
 
-.bounce {
-  animation: bounceDown 2s ease-in-out infinite;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin-left: clamp(18px, 4vw, 28px);
+  margin-right: auto;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+.hero-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4a574;
+  margin: 0 0 1rem;
+}
+
+.hero-name {
+  font-size: clamp(2.8rem, 8vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+  margin: 0 0 0.85rem;
+  color: #f7fbf9;
+}
+
+.hero-tagline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.05rem, 2.4vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(244, 250, 248, 0.9);
+  margin: 0 0 1.1rem;
+  max-width: 34rem;
+}
+
+.hero-summary {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(238, 244, 242, 0.82);
+  margin: 0 0 2rem;
+  max-width: 36rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-solid,
+.btn-ghost {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 650;
+  border-radius: 6px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-solid {
+  border: none;
+  background: #2a7a6e;
+  color: #f4faf8;
+
+  &:hover {
+    background: #329184;
+    transform: translateY(-2px);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(244, 250, 248, 0.35);
+  background: transparent;
+  color: #f4faf8;
+
+  &:hover {
+    border-color: rgba(196, 165, 116, 0.7);
+    color: #c4a574;
+    transform: translateY(-2px);
   }
 }
 
-@keyframes bounceDown {
-  0%, 100% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(8px); opacity: 1; }
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 88vh;
+    padding-bottom: 3.5rem;
+  }
 }
 </style>

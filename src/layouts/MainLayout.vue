@@ -1,25 +1,25 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR fFf" class="site-shell">
     <q-header class="main-header" :class="{ 'header-scrolled': scrolled, 'header-hidden': headerHidden }">
-      <q-toolbar class="site-wrap">
-        <a href="#hero" class="logo font-mono text-primary text-weight-bold text-h6 q-mr-auto" @click.prevent="scrollTo('hero')">
-          {{ personal.brand }}
+      <q-toolbar class="site-wrap header-bar">
+        <a href="#hero" class="wordmark" @click.prevent="scrollTo('hero')">
+          <span class="wordmark-name font-display">{{ personal.name }}</span>
         </a>
 
-        <div class="gt-sm row items-center q-gutter-x-md">
+        <div class="gt-sm row items-center nav-cluster">
           <a
             :href="cvPdfUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="nav-link text-caption text-weight-medium"
+            class="nav-link"
           >
             CV
           </a>
           <a
-            v-for="(link, i) in navLinks"
+            v-for="link in navLinks"
             :key="link.id"
             :href="'#' + link.id"
-            class="nav-link text-caption text-weight-medium"
+            class="nav-link"
             :class="{ active: activeSection === link.id }"
             @click.prevent="scrollTo(link.id)"
           >
@@ -27,7 +27,7 @@
           </a>
         </div>
 
-        <q-btn flat dense round icon="menu" class="lt-md" color="white" @click="drawer = !drawer" />
+        <q-btn flat dense round icon="menu" class="lt-md" color="dark" @click="drawer = !drawer" />
       </q-toolbar>
     </q-header>
 
@@ -46,7 +46,7 @@
           </q-item-section>
         </q-item>
         <q-item
-          v-for="(link, i) in navLinks"
+          v-for="link in navLinks"
           :key="link.id"
           clickable
           @click="drawerScrollTo(link.id)"
@@ -58,38 +58,37 @@
       </q-list>
     </q-drawer>
 
-    <!-- Fixed side social bar (left) -->
-    <div class="side-social gt-sm">
-      <a
-        v-if="personal.website"
-        :href="personal.website"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Website"
-      >
-        <q-icon name="mdi-web" size="20px" />
-      </a>
-      <a :href="personal.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <q-icon name="mdi-github" size="20px" />
-      </a>
-      <a :href="personal.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <q-icon name="mdi-linkedin" size="20px" />
-      </a>
-      <a :href="'mailto:' + personal.email" aria-label="Email">
-        <q-icon name="mdi-email-outline" size="20px" />
-      </a>
-      <div class="side-line" />
-    </div>
-
-    <!-- Fixed side email (right) -->
-    <div class="side-email gt-sm">
-      <a :href="'mailto:' + personal.email" class="font-mono">{{ personal.email }}</a>
-      <div class="side-line" />
-    </div>
-
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer class="site-footer">
+      <div class="site-wrap footer-inner">
+        <p class="footer-copy font-mono">
+          {{ personal.name }} · Honolulu
+        </p>
+        <div class="footer-socials">
+          <a :href="personal.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <q-icon name="mdi-github" size="20px" />
+          </a>
+          <a
+            v-if="personal.scholar"
+            :href="personal.scholar"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Google Scholar"
+          >
+            <q-icon name="mdi-school-outline" size="20px" />
+          </a>
+          <a :href="personal.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <q-icon name="mdi-linkedin" size="20px" />
+          </a>
+          <a :href="'mailto:' + personal.email" aria-label="Email">
+            <q-icon name="mdi-email-outline" size="20px" />
+          </a>
+        </div>
+      </div>
+    </q-footer>
 
     <transition name="fade-up">
       <q-btn
@@ -102,7 +101,6 @@
         @click="scrollToTop"
       />
     </transition>
-
   </q-layout>
 </template>
 
@@ -113,11 +111,11 @@ import { cvPdfUrl } from 'src/data/media'
 
 const navLinks = [
   { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Experience' },
+  { id: 'experience', label: 'Employment' },
+  { id: 'publications', label: 'Publications' },
   { id: 'projects', label: 'Projects' },
   { id: 'education', label: 'Education' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'gallery', label: 'Gallery' },
+  { id: 'gallery', label: 'Field' },
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -130,7 +128,7 @@ let lastScroll = 0
 function scrollTo (id) {
   const el = document.getElementById(id)
   if (!el) return
-  const headerOffset = 70
+  const headerOffset = 72
   const top = el.getBoundingClientRect().top + window.scrollY - headerOffset
   window.scrollTo({ top, behavior: 'smooth' })
 }
@@ -147,7 +145,7 @@ function scrollToTop () {
 function onScroll () {
   const current = window.scrollY
   scrolled.value = current > 50
-  headerHidden.value = current > lastScroll && current > 200
+  headerHidden.value = current > lastScroll && current > 220
   lastScroll = current
 
   const scrollPos = current + window.innerHeight / 3
@@ -166,119 +164,116 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <style lang="scss" scoped>
+.site-shell {
+  background: #eef4f2;
+}
+
 .main-header {
-  background: rgba(53, 84, 49, 0.88);
-  backdrop-filter: blur(20px) saturate(1.5);
-  border-bottom: 1px solid rgba(240, 211, 160, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(238, 244, 242, 0.82);
+  backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: #0c2c34;
 }
 
 .header-scrolled {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-bottom-color: rgba(12, 44, 52, 0.08);
+  box-shadow: 0 8px 28px rgba(12, 44, 52, 0.06);
 }
 
 .header-hidden {
   transform: translateY(-100%);
 }
 
-.logo {
+.header-bar {
+  min-height: 64px;
+}
+
+.wordmark {
   text-decoration: none;
-  letter-spacing: -0.02em;
-  font-size: 1.1rem !important;
+  color: #0c2c34;
+  margin-right: auto;
+}
+
+.wordmark-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.nav-cluster {
+  gap: 0.15rem 1.15rem;
 }
 
 .nav-link {
-  color: rgba(249, 248, 248, 0.7);
+  color: rgba(12, 44, 52, 0.62);
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   padding: 6px 0;
-
-  .nav-num {
-    font-size: 0.7rem;
-    margin-right: 4px;
-  }
+  transition: color 0.2s ease;
 
   &:hover,
   &.active {
-    color: var(--q-primary);
+    color: #2a7a6e;
   }
 }
 
 .mobile-drawer {
-  background: #355431 !important;
-  border-left: 1px solid rgba(240, 211, 160, 0.08);
+  background: #eef4f2 !important;
+  border-left: 1px solid rgba(12, 44, 52, 0.08);
+  color: #0c2c34;
 }
 
-.side-social,
-.side-email {
-  position: fixed;
-  bottom: 0;
+.site-footer {
+  background: #0c2c34;
+  color: rgba(238, 244, 242, 0.75);
+  padding: 1.35rem 0;
+}
+
+.footer-inner {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 24px;
-  z-index: 10;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.side-social {
-  left: 32px;
+.footer-copy {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.1rem;
 
   a {
-    color: rgba(240, 211, 160, 0.5);
-    transition: all 0.3s ease;
+    color: rgba(238, 244, 242, 0.65);
+    transition: color 0.2s ease, transform 0.2s ease;
 
     &:hover {
-      color: var(--q-primary);
-      transform: translateY(-3px);
+      color: #9fd4cb;
+      transform: translateY(-2px);
     }
   }
-}
-
-.side-email {
-  right: 32px;
-
-  a {
-    writing-mode: vertical-rl;
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    color: rgba(240, 211, 160, 0.5);
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: var(--q-primary);
-      transform: translateY(-3px);
-    }
-  }
-}
-
-.side-line {
-  width: 1px;
-  height: 90px;
-  background: rgba(240, 211, 160, 0.2);
 }
 
 .back-to-top {
   position: fixed;
-  bottom: 32px;
-  right: 84px;
+  bottom: 28px;
+  right: 24px;
   z-index: 100;
-  color: rgba(88, 114, 82, 0.5) !important;
-  border: 1px solid rgba(88, 114, 82, 0.2);
+  color: #2a7a6e !important;
+  border: 1px solid rgba(42, 122, 110, 0.25);
+  background: rgba(238, 244, 242, 0.9) !important;
   backdrop-filter: blur(8px);
-  background: rgba(88, 114, 82, 0.06) !important;
-  transition: all 0.25s ease;
 
   &:hover {
-    color: rgba(88, 114, 82, 0.9) !important;
-    border-color: rgba(88, 114, 82, 0.4);
-    background: rgba(88, 114, 82, 0.12) !important;
+    border-color: rgba(42, 122, 110, 0.5);
     transform: translateY(-2px);
-  }
-
-  @media (max-width: 1024px) {
-    right: 20px;
-    bottom: 20px;
   }
 }
 
@@ -292,5 +287,4 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   opacity: 0;
   transform: translateY(12px);
 }
-
 </style>

@@ -1,37 +1,32 @@
 <template>
-  <section id="contact" class="section-block">
-    <div class="site-wrap text-center contact-inner">
-      <h2 class="font-display text-h3 text-white text-weight-bold q-mb-md" style="letter-spacing: -0.02em">
-        Contact Me
+  <section id="contact" class="section-block section-ink">
+    <div class="site-wrap contact-inner">
+      <h2 class="section-title">
+        Contact
       </h2>
 
-      <p class="text-grey-5 q-mb-xl" style="font-size: 1.05rem; line-height: 1.8">
+      <p class="contact-blurb">
         {{ personal.contactBlurb }}
       </p>
 
-      <q-btn
-        unelevated
-        no-caps
-        color="primary"
-        text-color="dark"
-        class="font-mono text-weight-medium q-mb-xl contact-btn"
-        padding="14px 40px"
-        type="a"
-        :href="'mailto:' + personal.email"
-        label="What's good?"
-        icon-right="mdi-email-outline"
-      />
+      <a :href="'mailto:' + personal.email" class="contact-email font-display">
+        {{ personal.email }}
+      </a>
 
-      <div class="row justify-center q-gutter-xl lt-md">
-          <a :href="personal.linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <q-icon name="mdi-linkedin" size="26px" class="social-icon text-grey-5" />
-          </a>
-          <a :href="personal.github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <q-icon name="mdi-github" size="26px" class="social-icon text-grey-5" />
-          </a>
-          <a :href="'mailto:' + personal.email" aria-label="Email">
-            <q-icon name="mdi-email-outline" size="26px" class="social-icon text-grey-5" />
-          </a>
+      <div class="contact-links">
+        <a :href="personal.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a
+          v-if="personal.scholar"
+          :href="personal.scholar"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Scholar</a>
+        <a :href="personal.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a
+          :href="cvPdfUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >CV</a>
       </div>
     </div>
   </section>
@@ -39,32 +34,52 @@
 
 <script setup>
 import { personal } from 'src/data/resume'
+import { cvPdfUrl } from 'src/data/media'
 </script>
 
 <style lang="scss" scoped>
 .contact-inner {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 640px;
 }
 
-.contact-btn {
-  font-size: 0.95rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+.contact-blurb {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(238, 244, 242, 0.75);
+  margin: -1rem 0 1.75rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #9fd4cb !important;
+  border-bottom: 2px solid rgba(159, 212, 203, 0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    box-shadow: 0 8px 32px rgba(240, 211, 160, 0.2);
-    transform: translateY(-2px);
+    color: #c4a574 !important;
+    border-color: rgba(196, 165, 116, 0.55);
   }
 }
 
-.social-icon {
-  transition: all 0.3s ease;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
 
-  &:hover {
-    color: var(--q-primary) !important;
-    transform: translateY(-3px);
+  a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(238, 244, 242, 0.65) !important;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      color: #c4a574 !important;
+    }
   }
 }
 </style>

@@ -1,163 +1,170 @@
 <template>
   <section id="projects" class="section-block section-light">
     <div class="site-wrap">
-      <h2 class="section-title text-white">
-        Some Projects
+      <h2 class="section-title">
+        Projects
       </h2>
 
-      <div class="exp-container">
-          <!-- Tab selector -->
-          <q-tabs
-            v-model="activeTab"
-            :vertical="$q.screen.gt.sm"
-            active-color="primary"
-            indicator-color="primary"
-            no-caps
-            class="exp-tabs"
-            :class="{ 'exp-tabs--vertical': $q.screen.gt.sm }"
-          >
-            <q-tab
-              v-for="(project, i) in projects"
-              :key="i"
-              :name="i"
-              class="exp-tab"
-            >
-              <span class="exp-tab-label">{{ project.title }}</span>
-            </q-tab>
-          </q-tabs>
-
-          <!-- Panel content -->
-          <q-tab-panels
-            v-model="activeTab"
-            animated
-            swipeable-horizontal="false"
-            transition-prev="fade"
-            transition-next="fade"
-            class="exp-panels bg-transparent"
-            style="overflow: hidden"
-          >
-            <q-tab-panel v-for="(project, i) in projects" :key="i" :name="i" class="q-pa-none">
-              <h3 class="text-h6 text-white text-weight-bold q-mb-xs">
-                {{ project.title }}
-                <span v-if="project.subtitle" class="text-primary"> @ {{ project.subtitle }}</span>
-              </h3>
-              <p class="font-mono text-grey-6 text-caption q-mb-sm">
-                {{ project.dates }}
-              </p>
-
-              <p class="text-grey-4 q-mt-md" style="font-size: 0.92rem; line-height: 1.7; max-width: min(760px, 100%)">
-                {{ project.description }}
-              </p>
-
-              <div class="row items-center q-gutter-sm q-mt-md">
-                <span v-for="tag in project.tags" :key="tag" class="tech-tag">
-                  {{ tag }}
-                </span>
-              </div>
-
-              <a
-                v-if="project.github"
-                :href="project.github"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="github-btn q-mt-lg"
+      <div class="project-list">
+        <article
+          v-for="(project, i) in projects"
+          :key="i"
+          class="project-item"
+        >
+          <div class="project-meta font-mono">{{ project.dates }}</div>
+          <div class="project-body">
+            <h3 class="font-display project-title">
+              {{ project.title }}
+              <span v-if="project.subtitle" class="project-sub"> — {{ project.subtitle }}</span>
+            </h3>
+            <p class="project-desc">{{ project.description }}</p>
+            <div v-if="project.cites?.length" class="cite-row">
+              <button
+                v-for="cite in project.cites"
+                :key="cite"
+                type="button"
+                class="cite-chip"
+                :title="citeTitle(cite)"
+                @click="goToPub(cite)"
               >
-                <q-icon name="mdi-github" size="18px" class="q-mr-xs" />
-                View on GitHub
-              </a>
-            </q-tab-panel>
-          </q-tab-panels>
-        </div>
+                {{ citeLabel(cite) }}
+              </button>
+            </div>
+            <div class="row q-gutter-sm q-mt-sm">
+              <span v-for="tag in project.tags" :key="tag" class="tech-tag">{{ tag }}</span>
+            </div>
+            <a
+              v-if="project.github"
+              :href="project.github"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link font-mono"
+            >
+              GitHub
+              <q-icon name="mdi-arrow-top-right" size="14px" class="q-ml-xs" />
+            </a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useQuasar } from 'quasar'
-import { projects } from 'src/data/resume'
+import { projects, publicationsByCite, pubAnchorId } from 'src/data/resume'
 
-const $q = useQuasar()
-const activeTab = ref(0)
+function citeLabel (cite) {
+  return publicationsByCite[cite]?.short || cite
+}
+
+function citeTitle (cite) {
+  const pub = publicationsByCite[cite]
+  return pub ? `${cite}: ${pub.title}` : cite
+}
+
+function goToPub (cite) {
+  const el = document.getElementById(pubAnchorId(cite))
+  if (!el) return
+  const headerOffset = 80
+  const top = el.getBoundingClientRect().top + window.scrollY - headerOffset
+  window.scrollTo({ top, behavior: 'smooth' })
+  el.classList.remove('pub-flash')
+  void el.offsetWidth
+  el.classList.add('pub-flash')
+  window.setTimeout(() => el.classList.remove('pub-flash'), 1600)
+}
 </script>
 
 <style lang="scss" scoped>
-.exp-container {
+.project-list {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: minmax(7rem, 9rem) 1fr;
+  gap: 1rem 1.75rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(12, 44, 52, 0.1);
+
+  &:last-child {
+    border-bottom: 1px solid rgba(12, 44, 52, 0.1);
+  }
 
   @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
   }
 }
 
-.exp-tabs {
-  flex-shrink: 0;
+.project-meta {
+  font-size: 0.76rem;
+  color: #5c736e;
+  padding-top: 0.35rem;
+}
 
-  &--vertical {
-    max-width: 280px;
-    border-left: 2px solid rgba(53, 84, 49, 0.15);
+.project-title {
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0c2c34;
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+.project-sub {
+  font-weight: 500;
+  color: #2a7a6e;
+}
+
+.project-desc {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #3d524e;
+  max-width: 46rem;
+}
+
+.cite-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+
+.cite-chip {
+  appearance: none;
+  border: 1px solid rgba(42, 122, 110, 0.3);
+  background: rgba(42, 122, 110, 0.08);
+  color: #2a7a6e;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 5px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: rgba(42, 122, 110, 0.16);
+    border-color: rgba(42, 122, 110, 0.5);
+    transform: translateY(-1px);
   }
 }
 
-.exp-tab {
-  justify-content: flex-start !important;
-  padding: 14px 24px;
-  min-height: 52px;
-}
-
-.exp-tab-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.92rem;
-  text-align: left;
-  color: #7a6466;
-}
-
-:deep(.q-tab--active) .exp-tab-label {
-  color: var(--q-primary);
-}
-
-:deep(.q-tab) {
-  color: #7a6466 !important;
-}
-
-:deep(.q-tab--active) {
-  color: var(--q-primary) !important;
-}
-
-.exp-panels {
-  flex: 1;
-  min-height: 280px;
-}
-
-:deep(.q-tab-panel) {
-  overflow: hidden;
-}
-
-:deep(.q-panel.scroll) {
-  overflow: hidden;
-}
-
-.github-btn {
+.project-link {
   display: inline-flex;
   align-items: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.82rem;
-  padding: 8px 18px;
-  border-radius: 8px;
-  border: 1px solid rgba(53, 84, 49, 0.15);
-  color: #6b5557;
-  background: transparent;
-  transition: all 0.3s ease;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #1a6fb5 !important;
   text-decoration: none;
 
   &:hover {
-    color: var(--q-primary);
-    border-color: rgba(240, 211, 160, 0.4);
-    background: rgba(240, 211, 160, 0.06);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(240, 211, 160, 0.08);
+    color: #0c2c34 !important;
   }
 }
 </style>

@@ -30,17 +30,17 @@ export default configure((/* ctx */) => {
 
     framework: {
       config: {
-        dark: true,
+        dark: false,
         brand: {
-          primary: '#F0D3A0',
-          secondary: '#587252',
-          accent: '#0075f2',
-          dark: '#355431',
-          'dark-page': '#355431',
-          positive: '#9FBF97',
-          negative: '#E9CC94',
-          info: '#0075f2',
-          warning: '#F0D3A0'
+          primary: '#2a7a6e',
+          secondary: '#c4a574',
+          accent: '#1a6fb5',
+          dark: '#0c2c34',
+          'dark-page': '#eef4f2',
+          positive: '#2a7a6e',
+          negative: '#b54a3a',
+          info: '#1a6fb5',
+          warning: '#c4a574'
         }
       },
       plugins: ['Dialog', 'Scroll']

@@ -1,8 +1,8 @@
 <template>
   <section id="about" class="section-block section-light">
     <div class="site-wrap">
-      <h2 class="section-title text-white">
-        About Me
+      <h2 class="section-title">
+        About
       </h2>
 
       <div class="row q-col-gutter-xl items-start">
@@ -82,29 +82,32 @@ const mosaicSlots = computed(() => {
 
 <style lang="scss" scoped>
 .about-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
+  color: #3d524e;
 
   :deep(strong) {
-    color: #f9f8f8;
-    font-weight: 600;
+    color: #0c2c34;
+    font-weight: 700;
   }
 }
 
 .about-stat {
-  padding: 12px 20px;
-  border-left: 2px solid rgba(88, 114, 82, 0.4);
+  padding: 12px 18px;
+  border-left: 3px solid #2a7a6e;
 
   &-value {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2a7a6e;
   }
 
   &-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.05em;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-top: 2px;
+    color: #5c736e;
   }
 }
 

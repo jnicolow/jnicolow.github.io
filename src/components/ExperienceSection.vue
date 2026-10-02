@@ -1,57 +1,47 @@
 <template>
-  <section id="experience" class="section-block experience-section">
+  <section id="experience" class="section-block section-ink experience-section">
     <div class="site-wrap">
-      <h2 class="section-title text-white">
+      <h2 class="section-title">
         Employment
       </h2>
 
-      <div class="timeline">
-        <div
+      <div class="role-list">
+        <article
           v-for="(job, i) in displayedExperience"
           :key="jobKey(job, i)"
-          class="timeline-item"
+          class="role-row"
         >
-          <div class="timeline-marker" />
-          <div class="timeline-content glass-card q-pa-xl">
-            <div class="timeline-header">
-              <h3 class="font-display timeline-job-title text-white text-weight-bold q-my-none">
-                {{ job.title }}
-              </h3>
-              <span class="timeline-date font-mono text-grey-5 text-body2 q-my-none">
-                {{ job.dates }}
-              </span>
-            </div>
-
-            <p class="text-primary timeline-company text-subtitle1 q-mb-none q-mt-sm">{{ job.company }}</p>
-            <p class="font-mono text-grey-5 text-body2 q-mt-xs q-mb-none">
-              {{ job.location }}
-            </p>
-
-            <div class="q-mt-lg timeline-bullets">
-              <div
-                v-for="(bullet, j) in job.bullets"
-                :key="j"
-                class="row no-wrap q-mb-md"
-              >
-                <span class="timeline-bullet-marker q-mr-sm" style="flex-shrink: 0; margin-top: 4px">&#9656;</span>
-                <span class="text-grey-3 timeline-bullet-text">{{ bullet }}</span>
-              </div>
-            </div>
+          <div class="role-when font-mono">{{ job.dates }}</div>
+          <div class="role-main">
+            <h3 class="font-display role-title">{{ job.title }}</h3>
+            <p class="role-company">{{ job.company }}</p>
+            <p class="role-location font-mono">{{ job.location }}</p>
+            <ul class="role-bullets">
+              <li v-for="(bullet, j) in job.bullets" :key="j">
+                <span>{{ bulletText(bullet) }}</span>
+                <span v-if="bulletCites(bullet).length" class="cite-row">
+                  <button
+                    v-for="cite in bulletCites(bullet)"
+                    :key="cite"
+                    type="button"
+                    class="cite-chip"
+                    :title="citeTitle(cite)"
+                    @click="goToPub(cite)"
+                  >
+                    {{ citeLabel(cite) }}
+                  </button>
+                </span>
+              </li>
+            </ul>
           </div>
-        </div>
+        </article>
       </div>
 
-      <div v-if="canToggleExperience" class="row justify-center q-mt-lg">
-        <q-btn
-          flat
-          no-caps
-          color="secondary"
-          class="font-mono text-weight-medium expand-btn"
-          padding="10px 24px"
-          :label="expanded ? 'Show less' : 'Show all experience'"
-          :icon-right="expanded ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-          @click="expanded = !expanded"
-        />
+      <div v-if="canToggleExperience" class="row justify-center q-mt-xl">
+        <button type="button" class="expand-btn font-mono" @click="expanded = !expanded">
+          {{ expanded ? 'Show less' : 'Show all experience' }}
+          <q-icon :name="expanded ? 'mdi-chevron-up' : 'mdi-chevron-down'" size="18px" class="q-ml-xs" />
+        </button>
       </div>
     </div>
   </section>
@@ -59,7 +49,13 @@
 
 <script setup>
 import { computed, ref } from 'vue'
-import { experience, experienceSettings } from 'src/data/resume'
+import {
+  experience,
+  experienceSettings,
+  normalizeBullet,
+  publicationsByCite,
+  pubAnchorId
+} from 'src/data/resume'
 
 const expanded = ref(false)
 
@@ -67,7 +63,38 @@ function jobKey (job, i) {
   return `${job.title}|${job.dates}|${job.company}|${i}`
 }
 
-/** Collapsed: first `collapsedCount` roles that are not `expandOnly`; expanded: full list (same order as data). */
+function bulletText (bullet) {
+  return normalizeBullet(bullet).text
+}
+
+function bulletCites (bullet) {
+  return normalizeBullet(bullet).cites
+}
+
+function citeLabel (cite) {
+  const pub = publicationsByCite[cite]
+  return pub?.short || cite
+}
+
+function citeTitle (cite) {
+  const pub = publicationsByCite[cite]
+  if (!pub) return cite
+  return `${cite}: ${pub.title}`
+}
+
+function goToPub (cite) {
+  const el = document.getElementById(pubAnchorId(cite))
+  if (!el) return
+  const headerOffset = 80
+  const top = el.getBoundingClientRect().top + window.scrollY - headerOffset
+  window.scrollTo({ top, behavior: 'smooth' })
+  el.classList.remove('pub-flash')
+  // re-trigger animation
+  void el.offsetWidth
+  el.classList.add('pub-flash')
+  window.setTimeout(() => el.classList.remove('pub-flash'), 1600)
+}
+
 const displayedExperience = computed(() => {
   if (expanded.value) return experience
   const n = experienceSettings.collapsedCount ?? 3
@@ -99,139 +126,132 @@ const canToggleExperience = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-/* Matches $secondary / $positive in quasar.variables.scss */
-.experience-section {
-  --exp-accent: #a83e03;
+.role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 2.25rem;
-}
-
-/* Vertical track (“scrollbar”) beside roles */
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  bottom: 10px;
-  width: 5px;
-  border-radius: 3px;
-  background: linear-gradient(
-    180deg,
-    var(--exp-accent) 0%,
-    rgba(168, 62, 3, 0.35) 55%,
-    rgba(168, 62, 3, 0.2) 100%
-  );
-  box-shadow: 0 0 20px rgba(168, 62, 3, 0.15);
-}
-
-.timeline-item {
-  position: relative;
-  padding-bottom: 2.75rem;
+.role-row {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) 1fr;
+  gap: 1.25rem 2rem;
+  padding: 1.65rem 0;
+  border-top: 1px solid rgba(238, 244, 242, 0.12);
+  transition: background 0.25s ease;
 
   &:last-child {
-    padding-bottom: 0;
+    border-bottom: 1px solid rgba(238, 244, 242, 0.12);
+  }
+
+  &:hover {
+    background: rgba(238, 244, 242, 0.04);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }
 
-.timeline-marker {
-  position: absolute;
-  left: -2.25rem;
-  top: 28px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #355431;
-  border: 3px solid var(--exp-accent);
-  transform: translateX(calc(-50% + 2.5px));
-  z-index: 1;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
+.role-when {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: #c4a574;
+  padding-top: 0.35rem;
 }
 
-.timeline-item:hover .timeline-marker {
-  background: var(--exp-accent);
-  box-shadow:
-    0 0 0 4px rgba(168, 62, 3, 0.2),
-    0 0 16px rgba(168, 62, 3, 0.45);
+.role-title {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #f4faf8;
+  margin: 0 0 0.35rem;
 }
 
-.timeline-content {
-  border-left: 4px solid transparent !important;
-  border-radius: 6px 20px 20px 6px !important;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.22),
-    0 0 0 1px rgba(240, 211, 160, 0.06);
-}
-
-.timeline-item:hover .timeline-content {
-  border-left-color: var(--exp-accent) !important;
-  transform: translateX(6px);
-  box-shadow:
-    0 18px 48px rgba(0, 0, 0, 0.28),
-    0 0 48px rgba(168, 62, 3, 0.08);
-}
-
-.timeline-job-title {
-  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-}
-
-.timeline-company {
+.role-company {
+  margin: 0;
+  font-size: 1.02rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  color: #9fd4cb;
 }
 
-.timeline-bullet-marker {
-  color: var(--exp-accent);
-  font-size: 0.95rem;
+.role-location {
+  margin: 0.35rem 0 0;
+  font-size: 0.76rem;
+  color: rgba(238, 244, 242, 0.5);
 }
 
-.timeline-bullet-text {
-  font-size: 1.03rem;
-  line-height: 1.75;
+.role-bullets {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
 }
 
-.timeline-header {
+.role-bullets li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(238, 244, 242, 0.82);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 2px;
+    background: #c4a574;
+  }
+}
+
+.cite-row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
 }
 
-.timeline-date {
-  white-space: nowrap;
-  flex-shrink: 0;
-  opacity: 0.95;
+.cite-chip {
+  appearance: none;
+  border: 1px solid rgba(196, 165, 116, 0.45);
+  background: rgba(196, 165, 116, 0.12);
+  color: #e8d2a8;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 5px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+
+  &:hover {
+    background: rgba(196, 165, 116, 0.22);
+    border-color: #c4a574;
+    color: #f4faf8;
+    transform: translateY(-1px);
+  }
 }
 
 .expand-btn {
-  border: 1px solid rgba(168, 62, 3, 0.4);
-  border-radius: 8px;
-}
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(196, 165, 116, 0.4);
+  background: transparent;
+  color: #c4a574;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 
-@media (max-width: 600px) {
-  .timeline {
-    padding-left: 1.65rem;
-  }
-
-  .timeline-marker {
-    left: -1.65rem;
-    transform: translateX(calc(-50% + 2px));
-  }
-
-  .timeline-header {
-    flex-direction: column;
-    gap: 0.35rem;
-    align-items: flex-start;
-  }
-
-  .timeline-job-title {
-    font-size: clamp(1.22rem, 5vw, 1.55rem);
+  &:hover {
+    border-color: #c4a574;
+    background: rgba(196, 165, 116, 0.08);
   }
 }
 </style>

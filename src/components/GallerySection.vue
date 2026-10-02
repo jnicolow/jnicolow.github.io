@@ -1,8 +1,8 @@
 <template>
   <section id="gallery" class="section-block">
     <div class="site-wrap">
-      <h2 class="section-title text-white">
-        Gallery
+      <h2 class="section-title">
+        Field & lab
       </h2>
 
       <div v-if="displayedGallery.length" class="gallery-grid">
@@ -195,14 +195,14 @@ function navigate (dir) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(53, 84, 49, 0.65);
+  background: rgba(12, 44, 52, 0.7);
   backdrop-filter: blur(4px);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .lightbox-backdrop {
-  background: rgba(53, 84, 49, 0.95);
+  background: rgba(12, 44, 52, 0.96);
   width: 100%;
   height: 100%;
   position: relative;

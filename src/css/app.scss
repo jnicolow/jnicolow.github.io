@@ -1,236 +1,191 @@
 @use 'sass:color';
 
-/* ===== Typography ===== */
+/* ===== Typography — distinct from Brian / Space Grotesk + Inter ===== */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Figtree', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1a2e2a;
+  background: #eef4f2;
 }
 
 .font-display {
-  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-family: 'Bricolage Grotesque', 'Figtree', sans-serif;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
-/* ===== Ambient Background ===== */
+/* Soft coastal wash — not the dark radial clone */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse 600px 400px at 15% 30%, rgba(0, 117, 242, 0.04) 0%, transparent 100%),
-    radial-gradient(ellipse 500px 500px at 85% 15%, rgba(88, 114, 82, 0.04) 0%, transparent 100%),
-    radial-gradient(ellipse 400px 300px at 50% 85%, rgba(240, 211, 160, 0.03) 0%, transparent 100%);
+    radial-gradient(ellipse 900px 520px at 8% 0%, rgba(42, 122, 110, 0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 700px 480px at 100% 20%, rgba(196, 165, 116, 0.1) 0%, transparent 65%),
+    linear-gradient(180deg, #eef4f2 0%, #e6eeeb 100%);
   pointer-events: none;
 }
 
 /* ===== Sections ===== */
 .section-block {
-  padding: 100px 0;
+  padding: 96px 0;
   position: relative;
 }
 
-/** Main column: wider than legacy 1100px; gutters scale down on small viewports */
 .site-wrap {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1360px;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(14px, 3vw, 22px);
-  padding-right: clamp(14px, 3vw, 22px);
+  padding-left: clamp(18px, 4vw, 28px);
+  padding-right: clamp(18px, 4vw, 28px);
 }
 
 .section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.85rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.05rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  color: #0c2c34;
+  margin: 0 0 2.5rem;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 52px;
+  align-items: baseline;
+  gap: 12px;
+
+  &::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: #2a7a6e;
+    transform: rotate(12deg);
+    flex-shrink: 0;
+    margin-top: 0.35em;
+  }
+
+  /* Kill leftover text-white utility on light pages */
+  &.text-white {
+    color: #0c2c34 !important;
+  }
 }
 
-.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, rgba(159, 191, 151, 0.25), transparent);
-  max-width: 300px;
-  margin-left: 16px;
-}
-
-/* ===== Links ===== */
 a {
-  color: $primary;
+  color: #1a6fb5;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 
   &:hover {
-    color: color.adjust($primary, $lightness: 10%);
+    color: color.adjust(#1a6fb5, $lightness: -8%);
   }
 }
 
 ::selection {
-  background: $primary;
-  color: color.adjust($dark, $lightness: -12%);
+  background: rgba(42, 122, 110, 0.22);
+  color: #0c2c34;
 }
 
-/* ===== Glass Cards (Dark Sections) ===== */
+/* Soft panels (replaces dark glass-card look) */
 .glass-card {
-  background: rgba(53, 84, 49, 0.72) !important;
-  border: 1px solid rgba(159, 191, 151, 0.12);
-  border-radius: 16px !important;
-  backdrop-filter: blur(12px);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff !important;
+  border: 1px solid rgba(12, 44, 52, 0.08);
+  border-radius: 12px !important;
+  box-shadow: 0 8px 28px rgba(12, 44, 52, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
   &:hover {
-    border-color: rgba(240, 211, 160, 0.2);
-    background: rgba(53, 84, 49, 0.88) !important;
-    transform: translateY(-4px);
-    box-shadow:
-      0 20px 40px rgba(0, 0, 0, 0.2),
-      0 0 60px rgba(240, 211, 160, 0.06);
+    border-color: rgba(42, 122, 110, 0.28);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(12, 44, 52, 0.1);
   }
 }
 
-/* ===== Skill Chips (Dark Sections) ===== */
 .skill-chip {
-  border: 1px solid rgba(159, 191, 151, 0.14) !important;
-  background: rgba(53, 84, 49, 0.55) !important;
-  font-family: 'JetBrains Mono', monospace !important;
-  font-size: 0.8rem !important;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(12, 44, 52, 0.12) !important;
+  background: rgba(42, 122, 110, 0.06) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 0.78rem !important;
+  color: #1a2e2a !important;
+  transition: all 0.25s ease;
 
   &:hover {
-    color: $primary !important;
-    border-color: rgba(240, 211, 160, 0.35) !important;
-    background: rgba(240, 211, 160, 0.1) !important;
+    color: #2a7a6e !important;
+    border-color: rgba(42, 122, 110, 0.4) !important;
+    background: rgba(42, 122, 110, 0.12) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(240, 211, 160, 0.08);
   }
 }
 
-/* ===== Tech Tags ===== */
 .tech-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
-  color: $secondary;
-  padding: 4px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  color: #2a7a6e;
+  padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(88, 114, 82, 0.12);
+  background: rgba(42, 122, 110, 0.1);
   white-space: nowrap;
 }
 
-/* ===== Timeline Overrides ===== */
-.q-timeline {
-  &__dot {
-    .q-timeline__dot-bg {
-      background: $primary !important;
+/* Banded dark sections (employment / contact accents) */
+.section-ink {
+  background: #0c2c34;
+  color: #eef4f2;
+
+  .section-title {
+    color: #f4faf8 !important;
+
+    &::before {
+      background: #c4a574;
     }
   }
+
+  .text-white { color: #f4faf8 !important; }
+  .text-grey-4,
+  .text-grey-5 { color: rgba(238, 244, 242, 0.72) !important; }
+  .text-grey-6 { color: rgba(238, 244, 242, 0.55) !important; }
+  .text-primary { color: #9fd4cb !important; }
 }
 
-/* ===== Scrollbar ===== */
+/* Legacy light utility — keep readable on seafoam page */
+.section-light {
+  background: transparent;
+
+  h1, h2, h3, h4, h5, h6 { color: #0c2c34; }
+  .text-white { color: #0c2c34 !important; }
+  .text-grey-4 { color: #3d524e !important; }
+  .text-grey-5 { color: #4a605b !important; }
+  .text-grey-6 { color: #5c736e !important; }
+  strong { color: #0c2c34 !important; }
+  .text-primary { color: #2a7a6e !important; }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
-
 ::-webkit-scrollbar-track {
-  background: $dark;
+  background: #e0ebe7;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: rgba(159, 191, 151, 0.3);
+  background: rgba(42, 122, 110, 0.35);
   border-radius: 3px;
 
   &:hover {
-    background: rgba(159, 191, 151, 0.5);
+    background: rgba(42, 122, 110, 0.55);
   }
 }
 
-/* =======================================
-   Light Sections (Bright Snow #f9f8f8)
-   ======================================= */
-.section-light {
-  background: #f9f8f8;
-
-  /* Text overrides for light background */
-  h1, h2, h3, h4, h5, h6 { color: $dark; }
-
-  .text-white { color: $dark !important; }
-  .text-grey-4 { color: #6b5557 !important; }
-  .text-grey-5 { color: #7a6466 !important; }
-  .text-grey-6 { color: #8a7678 !important; }
-  strong { color: #3a2c2d !important; }
-
-  /* Darken primary for readability on white */
-  .text-primary { color: color.adjust($primary, $lightness: -38%) !important; }
-
-  .section-title::after {
-    background: linear-gradient(to right, rgba(53, 84, 49, 0.14), transparent) !important;
-  }
-
-  /* Cards become white on light sections */
-  .glass-card {
-    background: #ffffff !important;
-    border-color: rgba(53, 84, 49, 0.08) !important;
-    backdrop-filter: none !important;
-    box-shadow: 0 2px 20px rgba(53, 84, 49, 0.06) !important;
-
-    &:hover {
-      background: #ffffff !important;
-      border-color: rgba(240, 211, 160, 0.45) !important;
-      transform: translateY(-4px);
-      box-shadow:
-        0 12px 40px rgba(53, 84, 49, 0.08),
-        0 0 40px rgba(240, 211, 160, 0.08) !important;
-    }
-  }
-
-  /* Tech tags on light bg */
-  .tech-tag {
-    background: rgba(88, 114, 82, 0.1);
-    color: color.adjust($secondary, $lightness: -10%);
-  }
-
-  /* Skill chips on light bg */
-  .skill-chip {
-    background: rgba(53, 84, 49, 0.05) !important;
-    border-color: rgba(53, 84, 49, 0.12) !important;
-    color: #6b5557 !important;
-
-    &:hover {
-      color: color.adjust($primary, $lightness: -38%) !important;
-      border-color: rgba(240, 211, 160, 0.45) !important;
-      background: rgba(240, 211, 160, 0.12) !important;
-    }
-  }
-
-  /* Links on light bg */
-  a {
-    color: color.adjust($primary, $lightness: -35%);
-
-    &:hover {
-      color: color.adjust($primary, $lightness: -22%);
-    }
-  }
-}
-
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .section-block {
     padding: 64px 0;
   }
 
   .section-title {
-    font-size: 1.5rem;
-    margin-bottom: 36px;
+    font-size: 1.45rem;
+    margin-bottom: 2rem;
   }
 }
 

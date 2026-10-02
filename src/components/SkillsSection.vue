@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="section-block section-light">
     <div class="site-wrap">
-      <h2 class="section-title text-white">
+      <h2 class="section-title">
         Skills
       </h2>
 
@@ -14,7 +14,7 @@
           <div class="skill-card q-pa-lg">
               <div class="row items-center q-mb-md">
                 <q-icon :name="categoryIcon(category)" color="primary" size="24px" class="q-mr-sm" />
-                <h3 class="font-display text-subtitle1 text-white text-weight-bold q-ma-none">
+                <h3 class="font-display text-subtitle1 text-weight-bold q-ma-none skill-cat">
                   {{ category }}
                 </h3>
               </div>
@@ -23,8 +23,8 @@
                   v-for="skill in items"
                   :key="skill"
                   class="skill-chip"
-                  color="dark"
-                  text-color="grey-4"
+                  outline
+                  color="primary"
                   size="md"
                 >
                   {{ skill }}
@@ -55,19 +55,21 @@ function categoryIcon (cat) {
 </script>
 
 <style lang="scss" scoped>
+.skill-cat {
+  color: #0c2c34;
+}
+
 .skill-card {
   background: #ffffff;
-  border: 1px solid rgba(53, 84, 49, 0.06);
-  border-radius: 16px;
-  box-shadow: 0 2px 20px rgba(53, 84, 49, 0.06);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(12, 44, 52, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 22px rgba(12, 44, 52, 0.05);
+  transition: all 0.3s ease;
 
   &:hover {
-    border-color: rgba(240, 211, 160, 0.25);
-    transform: translateY(-4px);
-    box-shadow:
-      0 12px 40px rgba(53, 84, 49, 0.08),
-      0 0 40px rgba(240, 211, 160, 0.04);
+    border-color: rgba(42, 122, 110, 0.28);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(12, 44, 52, 0.08);
   }
 }
 </style>
