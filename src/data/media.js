@@ -1,5 +1,5 @@
 /**
- * Site images: `src/assets/media/{hero,about,gallery}/` (see globs below).
+ * Site images: `src/assets/media/{hero,about,gallery,pubs,projects}/` (see globs below).
  * CV PDF: `src/assets/media/cv/` — imported once as `cvPdfUrl`.
  * Each import.meta.glob MUST use a string literal (Vite limitation).
  */
@@ -78,6 +78,18 @@ const pubsModules = {
   ...import.meta.glob('../assets/media/pubs/*.WEBP', { eager: true, import: 'default' })
 }
 
+/** Optional project media (posters, figures) — basename only in resume.js */
+const projectModules = {
+  ...import.meta.glob('../assets/media/projects/*.jpg', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.jpeg', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.png', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.webp', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.JPG', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.JPEG', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.PNG', { eager: true, import: 'default' }),
+  ...import.meta.glob('../assets/media/projects/*.WEBP', { eager: true, import: 'default' })
+}
+
 export const heroPhotos = sortedUrls(heroModules)
 
 /** Prefer this file when present; otherwise first hero image */
@@ -143,5 +155,20 @@ export function resolvePubImage (basename) {
     return null
   }
   const mod = pubsModules[key]
+  return typeof mod === 'string' ? mod : mod.default
+}
+
+/** Resolve optional project image basename → bundled URL (or null) */
+export function resolveProjectImage (basename) {
+  if (!basename) return null
+  const key = Object.keys(projectModules).find((p) => {
+    const normalized = p.replace(/\\/g, '/')
+    return normalized.endsWith('/' + basename) || normalized.endsWith(basename)
+  })
+  if (!key) {
+    console.warn(`[media] projects image not found: ${basename}`)
+    return null
+  }
+  const mod = projectModules[key]
   return typeof mod === 'string' ? mod : mod.default
 }

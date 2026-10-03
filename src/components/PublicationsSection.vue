@@ -24,7 +24,7 @@
       <h3 class="pubs-subhead font-display">Journal articles</h3>
 
       <article
-        v-for="(pub, i) in publicationsJournals"
+        v-for="(pub, i) in displayedJournals"
         :key="pub.cite || i"
         :id="pubAnchorId(pub.cite)"
         class="journal-card"
@@ -64,11 +64,18 @@
         </div>
       </article>
 
+      <div v-if="canToggleJournals" class="row justify-center q-mt-md q-mb-lg">
+        <button type="button" class="expand-btn font-mono" @click="journalsExpanded = !journalsExpanded">
+          {{ journalsExpanded ? 'Show fewer articles' : 'Show all journal articles' }}
+          <q-icon :name="journalsExpanded ? 'mdi-chevron-up' : 'mdi-chevron-down'" size="18px" class="q-ml-xs" />
+        </button>
+      </div>
+
       <h3 class="pubs-subhead font-display q-mt-xl">Conference posters &amp; talks</h3>
 
       <div class="poster-grid">
         <article
-          v-for="(p, k) in publicationsPosters"
+          v-for="(p, k) in displayedPosters"
           :key="p.cite || k"
           :id="pubAnchorId(p.cite)"
           class="poster-card"
@@ -101,13 +108,45 @@
           </div>
         </article>
       </div>
+
+      <div v-if="canTogglePosters" class="row justify-center q-mt-lg">
+        <button type="button" class="expand-btn font-mono" @click="postersExpanded = !postersExpanded">
+          {{ postersExpanded ? 'Show fewer posters' : 'Show all conference posters' }}
+          <q-icon :name="postersExpanded ? 'mdi-chevron-up' : 'mdi-chevron-down'" size="18px" class="q-ml-xs" />
+        </button>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { personal, publicationsJournals, publicationsPosters, pubAnchorId } from 'src/data/resume'
+import { computed } from 'vue'
+import {
+  personal,
+  publicationsJournals,
+  publicationsPosters,
+  publicationSettings,
+  pubAnchorId
+} from 'src/data/resume'
 import { resolvePubImage } from 'src/data/media'
+import { journalsExpanded, postersExpanded } from 'src/composables/goToPublication'
+
+const journalLimit = publicationSettings.journalsCollapsedCount ?? 4
+const posterLimit = publicationSettings.postersCollapsedCount ?? 3
+
+const displayedJournals = computed(() => {
+  if (journalsExpanded.value) return publicationsJournals
+  return publicationsJournals.slice(0, journalLimit)
+})
+
+const canToggleJournals = computed(() => publicationsJournals.length > journalLimit)
+
+const displayedPosters = computed(() => {
+  if (postersExpanded.value) return publicationsPosters
+  return publicationsPosters.slice(0, posterLimit)
+})
+
+const canTogglePosters = computed(() => publicationsPosters.length > posterLimit)
 
 function pubImage (item) {
   return resolvePubImage(item.image)
@@ -358,6 +397,24 @@ function highlightSelf (authors) {
   }
   100% {
     box-shadow: 0 6px 22px rgba(12, 44, 52, 0.05);
+  }
+}
+
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(42, 122, 110, 0.35);
+  background: transparent;
+  color: #2a7a6e;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #2a7a6e;
+    background: rgba(42, 122, 110, 0.08);
   }
 }
 </style>

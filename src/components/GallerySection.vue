@@ -116,10 +116,25 @@ function pickPreviewSix () {
 pickPreviewSix()
 
 const lightboxOpen = ref(false)
+const activeIdx = ref(null)
 
 let rotateTimer = null
 
+function onLightboxKeydown (e) {
+  if (!lightboxOpen.value) return
+  if (e.key === 'ArrowLeft') {
+    e.preventDefault()
+    navigate(-1)
+  } else if (e.key === 'ArrowRight') {
+    e.preventDefault()
+    navigate(1)
+  } else if (e.key === 'Escape') {
+    lightboxOpen.value = false
+  }
+}
+
 onMounted(() => {
+  window.addEventListener('keydown', onLightboxKeydown)
   rotateTimer = setInterval(() => {
     if (galleryExpanded.value || lightboxOpen.value) return
     if (allGallery.length > GALLERY_PREVIEW_COUNT) {
@@ -129,6 +144,7 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  window.removeEventListener('keydown', onLightboxKeydown)
   clearInterval(rotateTimer)
 })
 
@@ -140,8 +156,6 @@ watch(galleryExpanded, (expanded) => {
     }
   }
 })
-
-const activeIdx = ref(null)
 
 function openLightbox (i) {
   activeIdx.value = i

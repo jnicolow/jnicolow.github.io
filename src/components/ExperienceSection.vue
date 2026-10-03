@@ -53,9 +53,9 @@ import {
   experience,
   experienceSettings,
   normalizeBullet,
-  publicationsByCite,
-  pubAnchorId
+  publicationsByCite
 } from 'src/data/resume'
+import { goToPublication } from 'src/composables/goToPublication'
 
 const expanded = ref(false)
 
@@ -83,16 +83,7 @@ function citeTitle (cite) {
 }
 
 function goToPub (cite) {
-  const el = document.getElementById(pubAnchorId(cite))
-  if (!el) return
-  const headerOffset = 80
-  const top = el.getBoundingClientRect().top + window.scrollY - headerOffset
-  window.scrollTo({ top, behavior: 'smooth' })
-  el.classList.remove('pub-flash')
-  // re-trigger animation
-  void el.offsetWidth
-  el.classList.add('pub-flash')
-  window.setTimeout(() => el.classList.remove('pub-flash'), 1600)
+  return goToPublication(cite)
 }
 
 const displayedExperience = computed(() => {

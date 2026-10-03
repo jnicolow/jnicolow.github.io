@@ -7,7 +7,7 @@
 
       <div class="project-list">
         <article
-          v-for="(project, i) in projects"
+          v-for="(project, i) in displayedProjects"
           :key="i"
           class="project-item"
         >
@@ -33,25 +33,117 @@
             <div class="row q-gutter-sm q-mt-sm">
               <span v-for="tag in project.tags" :key="tag" class="tech-tag">{{ tag }}</span>
             </div>
-            <a
-              v-if="project.github"
-              :href="project.github"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-link font-mono"
+            <button
+              v-if="projectImage(project)"
+              type="button"
+              class="project-poster"
+              :aria-label="`View poster for ${project.title}`"
+              @click="openPoster(project)"
             >
-              GitHub
-              <q-icon name="mdi-arrow-top-right" size="14px" class="q-ml-xs" />
-            </a>
+              <img
+                :src="projectImage(project)"
+                :alt="`Poster for ${project.title}`"
+              />
+              <span class="project-poster-hint font-mono">View poster</span>
+            </button>
+            <div v-if="githubLinks(project).length" class="project-links">
+              <a
+                v-for="link in githubLinks(project)"
+                :key="link.url"
+                :href="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link font-mono"
+              >
+                {{ link.label }}
+                <q-icon name="mdi-arrow-top-right" size="14px" class="q-ml-xs" />
+              </a>
+            </div>
           </div>
         </article>
       </div>
+
+      <div v-if="canToggleProjects" class="row justify-center q-mt-xl">
+        <button type="button" class="expand-btn font-mono" @click="expanded = !expanded">
+          {{ expanded ? 'Show fewer projects' : 'Show all projects' }}
+          <q-icon :name="expanded ? 'mdi-chevron-up' : 'mdi-chevron-down'" size="18px" class="q-ml-xs" />
+        </button>
+      </div>
     </div>
+
+    <q-dialog v-model="posterOpen" maximized transition-show="fade" transition-hide="fade">
+      <div class="poster-backdrop flex flex-center" @click="posterOpen = false">
+        <q-btn
+          flat
+          round
+          dense
+          icon="close"
+          color="white"
+          size="lg"
+          class="poster-close"
+          @click.stop="posterOpen = false"
+        />
+        <img
+          v-if="activePoster"
+          :src="activePoster.src"
+          :alt="activePoster.alt"
+          class="poster-full"
+          @click.stop
+        />
+      </div>
+    </q-dialog>
   </section>
 </template>
 
 <script setup>
-import { projects, publicationsByCite, pubAnchorId } from 'src/data/resume'
+import { computed, ref } from 'vue'
+import { projects, projectSettings, publicationsByCite } from 'src/data/resume'
+import { resolveProjectImage } from 'src/data/media'
+import { goToPublication } from 'src/composables/goToPublication'
+
+const expanded = ref(false)
+const posterOpen = ref(false)
+const activePoster = ref(null)
+
+const projectLimit = projectSettings.collapsedCount ?? 4
+
+const displayedProjects = computed(() => {
+  if (expanded.value) return projects
+  return projects.slice(0, projectLimit)
+})
+
+const canToggleProjects = computed(() => projects.length > projectLimit)
+
+function projectImage (project) {
+  return resolveProjectImage(project.image)
+}
+
+function openPoster (project) {
+  const src = projectImage(project)
+  if (!src) return
+  activePoster.value = { src, alt: `Poster for ${project.title}` }
+  posterOpen.value = true
+}
+
+/** Normalize `github` (string) or `githubs` (string[] / {label,url}[]) into link chips. */
+function githubLinks (project) {
+  const raw = project.githubs ?? project.github
+  if (!raw) return []
+  const list = Array.isArray(raw) ? raw : [raw]
+  return list
+    .map((item) => {
+      if (!item) return null
+      if (typeof item === 'string') {
+        const name = item.replace(/\/$/, '').split('/').pop() || 'GitHub'
+        return { label: name, url: item }
+      }
+      if (item.url) {
+        return { label: item.label || 'GitHub', url: item.url }
+      }
+      return null
+    })
+    .filter(Boolean)
+}
 
 function citeLabel (cite) {
   return publicationsByCite[cite]?.short || cite
@@ -63,15 +155,7 @@ function citeTitle (cite) {
 }
 
 function goToPub (cite) {
-  const el = document.getElementById(pubAnchorId(cite))
-  if (!el) return
-  const headerOffset = 80
-  const top = el.getBoundingClientRect().top + window.scrollY - headerOffset
-  window.scrollTo({ top, behavior: 'smooth' })
-  el.classList.remove('pub-flash')
-  void el.offsetWidth
-  el.classList.add('pub-flash')
-  window.setTimeout(() => el.classList.remove('pub-flash'), 1600)
+  return goToPublication(cite)
 }
 </script>
 
@@ -154,10 +238,51 @@ function goToPub (cite) {
   }
 }
 
+.project-poster {
+  appearance: none;
+  display: block;
+  margin-top: 1rem;
+  padding: 0;
+  border: 1px solid rgba(12, 44, 52, 0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eef4f2;
+  max-width: min(100%, 22rem);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    border-color: rgba(42, 122, 110, 0.45);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(12, 44, 52, 0.12);
+  }
+}
+
+.project-poster-hint {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.72rem;
+  color: #5c736e;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.85rem;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
-  margin-top: 0.85rem;
   font-size: 0.78rem;
   font-weight: 500;
   color: #1a6fb5 !important;
@@ -166,5 +291,47 @@ function goToPub (cite) {
   &:hover {
     color: #0c2c34 !important;
   }
+}
+
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(42, 122, 110, 0.35);
+  background: transparent;
+  color: #2a7a6e;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: #2a7a6e;
+    background: rgba(42, 122, 110, 0.08);
+  }
+}
+
+.poster-backdrop {
+  background: rgba(12, 44, 52, 0.96);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 3.5rem 1.25rem 1.5rem;
+}
+
+.poster-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 10;
+}
+
+.poster-full {
+  max-width: min(92vw, 1100px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
 }
 </style>

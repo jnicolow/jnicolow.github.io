@@ -14,14 +14,17 @@
           <div class="row items-start justify-between q-mb-sm" style="gap: 12px">
             <div>
               <div class="font-display text-h6 text-weight-bold edu-school">{{ deg.school }}</div>
-              <div class="edu-degree">{{ deg.degree }}</div>
+              <div class="edu-degree">
+                {{ deg.degree }}
+                <span v-if="deg.status" class="edu-status font-mono">{{ deg.status }}</span>
+              </div>
               <div class="text-caption q-mt-xs edu-loc">{{ deg.location }}</div>
             </div>
             <span class="font-mono text-caption edu-dates">{{ deg.dates }}</span>
           </div>
           <div v-if="deg.detail" class="q-mt-md">
-            <span class="font-mono edu-label text-caption">Thesis</span>
-            <p class="q-mt-xs edu-detail">
+            <span v-if="deg.detailLabel" class="font-mono edu-label text-caption">{{ deg.detailLabel }}</span>
+            <p class="edu-detail" :class="{ 'q-mt-xs': !!deg.detailLabel }">
               {{ deg.detail }}
             </p>
           </div>
@@ -101,6 +104,22 @@ import {
   font-weight: 600;
   margin-top: 4px;
   color: #2a7a6e;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edu-status {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8a6a3d;
+  background: rgba(196, 165, 116, 0.22);
+  border: 1px solid rgba(196, 165, 116, 0.45);
+  border-radius: 999px;
+  padding: 3px 9px;
 }
 
 .edu-loc,

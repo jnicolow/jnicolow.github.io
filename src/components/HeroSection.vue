@@ -71,7 +71,11 @@ function scrollTo (id) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
+  /*
+   * Keep the subject on the right. Vertically, crop top:bottom ≈ 2:1
+   * (object-position y% = fraction of overflow taken from the top).
+   */
+  object-position: right 66.666%;
 }
 
 .hero-scrim {

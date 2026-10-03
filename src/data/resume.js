@@ -13,17 +13,17 @@ export const personal = {
   scholar: 'https://scholar.google.com/citations?user=zSGvQXcAAAAJ&hl=en',
   tagline: 'Ph.D. student, Computer Science, University of Hawaiʻi at Mānoa',
   summary:
-    'Research on satellite-derived shorelines and machine learning for environmental monitoring, including fog detection from mountain trail cameras. M.S. and B.S. in Computer Science (UH Mānoa).',
+    'Interested in machine learning in the natural sciences — satellite-derived shorelines, environmental monitoring, and related remote-sensing work. M.S. and B.S. in Computer Science (UH Mānoa).',
   contactBlurb:
     'Email is the best way to reach me. CV, code, and publications are linked below.',
   about: [
-    'I am a Ph.D. student in <strong>Computer Science</strong> at the University of Hawaiʻi at Mānoa. I completed an M.S. (thesis on shoreline segmentation methods) and a B.S. (Honors, cum laude) in the same department.',
+    'I am a Ph.D. student in <strong>Computer Science</strong> at the University of Hawaiʻi at Mānoa. I completed an M.S. (thesis on shoreline segmentation methods) and a B.S. (Honors, cum laude) with a <strong>minor in Public Health</strong>.',
     'As a <strong>Graduate Research Assistant</strong> with the Coastal Research Collaborative, I work on semantic segmentation for satellite-derived shoreline methods and have co-authored NSF grant proposals. At the <strong>Water Resources Research Center</strong>, I built fog classification models for trail camera imagery using pretrained ResNet backbones.',
     'Earlier work includes EPSCoR undergraduate research, public-health data analysis (R, LaTeX), and field conservation with Kupu.'
   ],
   aboutStats: [
     { value: '3', label: 'Journal articles' },
-    { value: 'UH Mānoa', label: 'Ph.D. CS' },
+    { value: 'UH Mānoa', label: 'M.S. CS' },
     { value: 'CRC / WRRC', label: 'Labs' }
   ]
 }
@@ -33,6 +33,16 @@ export const personal = {
  */
 export const experienceSettings = {
   collapsedCount: 3
+}
+
+/** How many items show before “Show all” in Publications / Projects */
+export const publicationSettings = {
+  journalsCollapsedCount: 4,
+  postersCollapsedCount: 3
+}
+
+export const projectSettings = {
+  collapsedCount: 4
 }
 
 export const experience = [
@@ -130,23 +140,69 @@ export const experience = [
 
 export const projects = [
   {
+    title: 'CoastVision',
+    subtitle: 'Satellite-derived shorelines from PlanetScope',
+    description:
+      'Open-source Python framework for generating satellite-derived shorelines in PlanetScope imagery: download AOI imagery, co-register scenes, segment land/water, extract shorelines with marching squares, compute transect intersections, and apply tidal corrections. Used in the Waikīkī resolving-shorelines study.',
+    cites: ['J2'],
+    tags: ['PlanetScope', 'SDS', 'Machine learning', 'Python'],
+    github: 'https://github.com/Coastal-Research-Collaborative/CoastVision',
+    dates: '2023 \u2014 Present'
+  },
+  {
+    title: 'Satellite imagery download',
+    subtitle: 'Landsat · Sentinel · PlanetScope',
+    description:
+      'Companion Python packages for pulling coastal imagery: geedownload for Google Earth Engine Landsat and Sentinel, and planetscopedownload for Planet Labs PlanetScope orders — given a site polygon and date range.',
+    tags: ['Google Earth Engine', 'Planet API', 'Remote sensing', 'Python'],
+    githubs: [
+      {
+        label: 'geedownload',
+        url: 'https://github.com/Coastal-Research-Collaborative/geedownload'
+      },
+      {
+        label: 'planetscopedownload',
+        url: 'https://github.com/Coastal-Research-Collaborative/planetscopedownload'
+      }
+    ],
+    dates: '2024 \u2014 Present'
+  },
+  {
+    title: 'FogVision',
+    subtitle: 'WRRC · Mt. Kaʻala',
+    description:
+      'Open-source framework for classifying mountain trail-camera imagery by fog presence. ResNet50 embeddings feed separate diurnal and nocturnal classification heads trained on ~40k images from 30 sites.',
+    cites: ['C3', 'C1', 'C5'],
+    tags: ['PyTorch', 'ResNet', 'Computer vision'],
+    github: 'https://github.com/jnicolow/FogVision',
+    dates: '2024 \u2014 2025'
+  },
+  {
     title: 'Comparative shoreline segmentation (M.S. thesis)',
     subtitle: 'Six long-term beach survey sites',
     description:
       'Compared five shoreline segmentation methods across six long-term beach survey sites in Hawaiʻi.',
     tags: ['Segmentation', 'Remote sensing', 'Thesis'],
-    github: 'https://github.com/jnicolow',
+    image: '2025-12-15_nicolow_joel_masters_planb_poster.png',
     dates: '2024 \u2014 2025'
   },
   {
-    title: 'Fog in mountain trail cameras',
-    subtitle: 'WRRC · Mt. Kaʻala',
+    title: 'NumPy neural network',
+    subtitle: 'MNIST from scratch',
     description:
-      'Fog classification on trail camera images with pretrained ResNet models.',
-    cites: ['C3', 'C1', 'C5'],
-    tags: ['PyTorch', 'ResNet', 'Computer vision'],
-    github: 'https://github.com/jnicolow',
-    dates: '2024 \u2014 2025'
+      'Neural network and gradient descent implemented in NumPy (no deep-learning framework). Explored architectures and hyperparameters on MNIST; best model reached 94.6% test accuracy.',
+    tags: ['NumPy', 'Deep learning', 'MNIST'],
+    github: 'https://github.com/jnicolow/numpy_neural_network',
+    dates: '2023'
+  },
+  {
+    title: 'Pixel annotation tool',
+    subtitle: 'Interactive labeling in matplotlib',
+    description:
+      'Matplotlib-based interactive tool for labeling image pixels with a single-pixel selector, flood fill, or lasso — useful for building training masks for segmentation models.',
+    tags: ['Matplotlib', 'Annotation', 'Computer vision'],
+    github: 'https://github.com/jnicolow/Python-pixel-annotation-tool',
+    dates: '2022 \u2014 2023'
   }
 ]
 
@@ -157,6 +213,7 @@ export const educationDegrees = [
     location: 'Honolulu, HI',
     degree: 'Ph.D. Computer Science',
     dates: '2026 \u2014 Present',
+    status: 'In progress',
     detail: null
   },
   {
@@ -164,15 +221,17 @@ export const educationDegrees = [
     location: 'Honolulu, HI',
     degree: 'M.S. Computer Science',
     dates: '2024 \u2014 2025',
+    detailLabel: 'Thesis',
     detail:
-      'Thesis: Comparative Evaluation of Five Shoreline Segmentation Methods Across Six Long-Term Beach Survey Sites.'
+      'Comparative Evaluation of Five Shoreline Segmentation Methods Across Six Long-Term Beach Survey Sites.'
   },
   {
     school: 'University of Hawaiʻi at Mānoa',
     location: 'Honolulu, HI',
     degree: 'B.S. Computer Science — Honors Program, Cum Laude',
     dates: '2019 \u2014 2024',
-    detail: null
+    detailLabel: 'Minor',
+    detail: 'Public Health'
   }
 ]
 
